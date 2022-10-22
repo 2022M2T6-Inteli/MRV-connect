@@ -6,7 +6,7 @@
 
 # Nome do projeto
 
-## Nome do grupo
+## BFS - Builders For Solutions
 
 ## Integrantes: 
 - <a href="https://www.linkedin.com/in/antonionassar/">Antônio Nassar</a>
