@@ -6,8 +6,7 @@
     box-sizing: border-box;
 }
 
-
-
+/* posição e formato do logo MRV na tela */
 img {
     height: 5em;
     position: relative;
@@ -18,7 +17,7 @@ img {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
-
+/* criação do degradê e definição da sua cor */
 body{
     font-family: 'Averta-Regular', sans-serif;
     min-height: 100vh;
@@ -62,6 +61,8 @@ body{
         width: 400px;
     }
 }
+
+/* posição e formato do botão "próximo" */
 .btn {
     outline: none;
     border: none;
@@ -80,7 +81,7 @@ body{
     margin-top: 20px;
     
   }
-
+/* transição da cor do botão quando passar o mouse por cima */
 .btn:hover {
     background-color: #bebebe;
     transition: 0.5s;
@@ -99,17 +100,18 @@ body{
     color: #4A4A4A;
     text-indent: 40px;
   }
+/* posição do botão na tela */
   .form-field{
     text-align: center;
   }
-
+/* criação de linha decorativa laranja */
   .block{
     width: 100%;
     height: 5px;
     background-color: #ffb719;
 
   }
-
+/* deixando a caixa de texto transparente */
   #input{
     background: transparent;
     box-shadow: none;

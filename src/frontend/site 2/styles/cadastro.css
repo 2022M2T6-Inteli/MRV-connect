@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-
+/* criação do degradê e definição da sua cor */
 body {
   background: #ffb719;
   background: linear-gradient(180deg, #ffb719 15%, rgba(255,255,255,1) 85%);
@@ -13,12 +13,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/* definição do tamanho e posição das caixas de texto */
 form {
   width: 350px;
   position: relative;
 }
-
+/* posição e formato das caixas de texto */
 form .form-field::before {
   font-size: 20px;
   position: absolute;
@@ -60,7 +60,7 @@ form input {
   color: #4A4A4A;
   text-indent: 40px;
 }
-
+/* posição e formato do botão "entrar" */
 form .btn {
   outline: none;
   border: none;
@@ -75,7 +75,7 @@ form .btn {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-size: 17px;
 }
-
+/* posição e formato do logo MRV na tela */
 img {
     height: 5em;
     position: relative;
@@ -86,15 +86,14 @@ img {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
-
+/* definição de cor das lebels */
 label {
     font-size: large;
     color: black;
 }
-
+/* mensagem de realização de cadastro, caso não tenha */
 p {
   height: 5em;
-  position: relative;
   margin: 0;
   position: absolute;
   top: 80%;
@@ -102,11 +101,11 @@ p {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
+/* cor do botão de entrar */
 .btn-color {
     color: #ffb719;
 }
-
+/* criação da resposividade */
 @media screen and (max-width: 520px) {
     form {
         width: 250px;
@@ -117,12 +116,12 @@ p {
         height: 75px;
     }
 }
-
+/* transição da cor do botão quando passar o mouse por cima */
 .btn:hover {
     background-color: #bebebe;
     transition: 0.5s;
 }
-
+/* posição do botão na tela */
 form .btn {
     margin-top: 1.5em;
 }

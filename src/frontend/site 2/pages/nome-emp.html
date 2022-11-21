@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+ <!-- criação da página de cadastro, começando pelo nome da empresa --> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,18 @@
 </head>
 <body>
     <div id="bg"></div>
+    <!-- imagem logo MRV --> 
     <img src="../images/mrvlogo.svg" alt="MRV logo">
+    <!-- link para ir de uma página a outra (nome da empresa para o cnjp) --> 
   <form method="get" action="cnpj-emp.html">
+    <!-- pedindo informações para casatro --> 
     <h1>Qual o nome da sua empresa?</h1>
+    <!-- caixa de texto para o nome da empresa--> 
     <div class="form-field">
       <input type="text" placeholder="Nome" id="input" required/>
       <div class="block"></div>
     </div>
+    <!-- botão para ir para a próxima página --> 
     <div class="form-field">
       <button class="btn" type="submit">Próximo</button>
     </div>
