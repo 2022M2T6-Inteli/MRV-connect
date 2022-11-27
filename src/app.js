@@ -41,6 +41,7 @@ app.use((req, res, next) => {
 
 app.use("/", require("./routes/index"));
 app.use("/cadastro", require("./routes/cadastro"));
+app.use("/login", require("./routes/login"));
 
 app.use((req, res, next) => {
     const err = new Error("Não encontrado");
