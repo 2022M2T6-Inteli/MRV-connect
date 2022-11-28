@@ -11,7 +11,12 @@ router.post("/autenticacao", (req, res) => {
     let email = req.body["email"];
     let senha = req.body["senha"];
     console.log(senha);
-    const sql = "SELECT * FROM empreiteira WHERE senha=? AND email=?";// AND senha ="+ senha +"";
+    const sql = `
+        SELECT * 
+        FROM empreiteira 
+        WHERE 
+            senha=? AND 
+            email=?`;
 
     console.log(sql);
 
