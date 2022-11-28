@@ -4,7 +4,7 @@ const db = require('../utils/db');
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    const sql = "Select * FROM servico";
+    const sql = "Select * FROM empreiteira";
 
     console.log(sql);
 
