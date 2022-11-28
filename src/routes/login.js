@@ -26,7 +26,11 @@ router.post("/autenticacao", (req, res) => {
             res.send("Erro: bobao " + err.message);
             return;
         }
-        res.json(rows);
+        //res.json(rows);
+        if (rows === undefined) {
+            res.render("login/login");
+        };
+        res.render("MRV_admin/usuario-logado-admin");
     });
 });
 
