@@ -19,38 +19,39 @@
     <div id="modal" class="hide">
         <div class="modal-scrol">
             <div class="modal-header" id="close-modal"><img id="arrow" src="../modais/image/arrow.png"></div>
-                <div class="titulo-suas-obras"><h1><strong>Editar obras</strong></h1>
+                <div class="titulo-suas-obras"><h1><strong>Adicionar obras</strong></h1>
                 <div class="imagem-projeto"><img src="../modais/image/predio2.jpg"></div>
-                <button id="trocar-imagem">Trocar imagem</button>
+                <button id="trocar-imagem">Incluir imagem</button>
             </div>
 
             
             <div class="editar-informacoes">
+              <form method="post"   action="/modal-editarobra/inserirObra" >
                 
                   <div class="logradouro">
                     <h3>Logradouro:</h3>
-                    <input id="logradouro" type="text" value="Rua barão de Monte Valtes, 420 ">
+                    <input id="inputLogradouro" name="logradouro" type="text" placeholder="Rua barão de Monte Valtes, 420 ">
                   </div>
                 
                 <div class="endereco">  
                   
                   <div class="bairro">
                     <h3>Bairro:</h3>  
-                    <input id="endereco" type="text" value="Cardoso">
+                    <input id="bairro" name="bairro" type="text" placeholder="Cardoso">
                     
                   </div>
 
                   
-                  <div class="cidade">
+                  <!--div class="cidade">
                     <h3>Cidade:</h3> 
-                    <input id="endereco" type="select" value="Buritis">
+                    <input id="cidade" name="cidade" type="select" placeholder="Buritis">
                   </div>
 
                   
                   <div class="estado">
                     <h3>Estado:</h3>  
-                    <input id="endereco" type="select" value="Minas Gerais">
-                  </div>
+                    <input id="estado" name="estado" type="select" placeholder="Minas Gerais">
+                  </div-->
 
                 </div>
 
@@ -58,39 +59,43 @@
                   
                   <div class="bairro">
                     <h3>Data inicio:</h3>  
-                    <input id="endereco" type="text" value="02/01/2023">
+                    <input id="dataInicio" name="dataInicio" type="text" placeholder="02/01/2023">
                   </div>
 
                   
                   <div class="previsao-entrega">
                     <h3>Previsao de entrega:</h3> 
-                    <input id="previsao-entrega" type="text" value="02/01/2025">
+                    <input id="previsao-entrega" name="dataEntrega" type="text" placeholder="02/01/2025">
                   </div>
                 </div>
 
                 <div class="endereco">  
                   
                   <div class="bairro">
-                    <h3>Especialidade:</h3>  
-                    <input id="endereco" type="text" value="02/01/2023">
+                    <h3>Nome da obra:</h3>  
+                    <input id="nomeDaObra" name="nomeObra" type="text" placeholder="nome aqui">
                   </div>
 
                   
-                  <div class="previsao-entrega">
-                    <h3>Tamanho da obra:</h3> 
-                    <input id="previsao-entrega" type="text" value="02/01/2025">
+                  <div class="tamanho">
+                    <h3>Numero:</h3> 
+                    <input id="numero" name="numero" type="text" placeholder="numero">
                   </div>
                 </div>
                 
 
                 <div class="logradouro">
                   <h3>Descrição:</h3>
-                  <input id="descricao" type="text" value="">
+                  <input id="descricao" name="descricao" type="text" placeholder="">
                 </div>
+                <div class="atualiza-projeto"><button id="adiciona-projeto" type="submit">Adicionar projeto</button></div>
+              </form>    
             </div>
-            <div class="atualiza-projeto"><button id="atualiza-projeto">Atualizar projeto</button></div>
+            
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="modal-adicionarobra.js"></script>
   </body>
 
 
