@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 app.use("/", require("./routes/index"));
 app.use("/cadastro", require("./routes/cadastro"));
 app.use("/login", require("./routes/login"));
-app.use("/modal-adicionarobra", require("./routes/modal-adicionarobra"));
+app.use("/admin", require("./routes/admin"));
 
 
 //erro

@@ -23,11 +23,11 @@ router.post("/inserirObra", (req, res) => {
     let numero = req.body["numero"];
     let descricao = req.body["descricao"];
 
-    const sql = "INSERT INTO servico (nome, logradouro, bairro, numero, descricao) VALUES ('"+req.body.nomeObra+"', '"+req.body.logradouro+"', '"+req.body.bairro+"', '"+req.body.numero+"', '"+req.body.descricao+"')";
+    const sql = "INSERT INTO servico (nome, logradouro, bairro) VALUES ('"+req.body.nomeObra+"', '"+req.body.logradouro+"', '"+req.body.bairro+"')";
 
     console.log(sql);
 
-    db.run(sql, [nomeObra, logradouro, bairro, numero, descricao], (err, rows) =>{
+    db.run(sql, (err, rows) =>{
         if(err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
@@ -35,6 +35,27 @@ router.post("/inserirObra", (req, res) => {
         }
         res.json(rows);
     });
+});
+
+//rota para consultar uma obra
+router.get("/getObra", (req, res) => {
+    let id_servico = req.query["id_servico"];
+
+    const sql = `
+        SELECT *
+        FROM servico
+        WHERE
+            id_servico = ?`
+
+        db.get(sql, [id_servico], (err, rows) =>{
+            if(err) {
+                console.error(err.message);
+                res.send("Erro: " + err.message);
+                return;
+            }
+            console.log(rows);
+            res.json(rows);
+        });
 });
 
 //exporta cadastro para a api.js
