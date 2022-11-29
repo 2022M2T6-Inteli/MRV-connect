@@ -36,7 +36,7 @@ router.post("/autenticacao", (req, res) => {
     console.log("oi");
 
     sql = `
-    SELECT *
+    SELECT id_administrador
     FROM administrador_mrv
     WHERE
         senha = ? and
@@ -48,7 +48,9 @@ router.post("/autenticacao", (req, res) => {
             res.send("Erro: bobao " + err.message);
             return;
         }else if(rows !== undefined){
-            res.render("MRV_admin/criar_projeto");
+            console.log(rows["id_administrador"]);
+            console.log(rows);
+            res.redirect("../admin/listarServico?id_administrador="+rows["id_administrador"]);
         }else{
             res.render("login/login");
         };

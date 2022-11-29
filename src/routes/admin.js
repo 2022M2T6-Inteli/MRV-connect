@@ -58,5 +58,24 @@ router.get("/getObra", (req, res) => {
         });
 });
 
+
+router.get("/listarServico", (req, res) => {
+
+    const sql = `
+        SELECT 
+            id_servico, 
+            nome
+        FROM servico`
+
+        db.get(sql, (err, rows) =>{
+            if(err) {
+                console.error(err.message);
+                res.send("Erro: " + err.message);
+                return;
+            }
+            console.log(rows)
+            res.render("mrv_admin/feed", {servicos: rows});
+        });
+});
 //exporta cadastro para a api.js
 module.exports = router;

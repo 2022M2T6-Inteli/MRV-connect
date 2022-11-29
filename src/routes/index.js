@@ -14,6 +14,7 @@ router.get("/", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
+        console.log(rows);
         res.json(rows);
     });
 });
