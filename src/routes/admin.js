@@ -11,7 +11,7 @@ router.all("/", (req, res) => {
 });
 
 //insere um novo usuário no banco de dados
-router.post("/inserirObra", (req, res) => {
+router.post("/inserirServico", (req, res) => {
     let nomeObra = req.body["nomeObra"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
@@ -38,7 +38,7 @@ router.post("/inserirObra", (req, res) => {
 });
 
 //rota para consultar uma obra
-router.get("/getObra", (req, res) => {
+router.get("/inserirServico", (req, res) => {
     let id_servico = req.query["id_servico"];
 
     const sql = `
@@ -53,8 +53,7 @@ router.get("/getObra", (req, res) => {
                 res.send("Erro: " + err.message);
                 return;
             }
-            console.log(rows);
-            res.json(rows);
+            res.render("mrv_admin/criar_servico");
         });
 });
 
