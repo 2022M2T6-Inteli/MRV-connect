@@ -59,7 +59,7 @@ router.get("/getObra", (req, res) => {
 });
 
 
-router.get("/listarServico", (req, res) => {
+router.all("/listarServico", (req, res) => {
 
     const sql = `
         SELECT 
@@ -67,7 +67,7 @@ router.get("/listarServico", (req, res) => {
             nome
         FROM servico`
 
-        db.get(sql, (err, rows) =>{
+        db.all(sql, (err, rows) =>{
             if(err) {
                 console.error(err.message);
                 res.send("Erro: " + err.message);
