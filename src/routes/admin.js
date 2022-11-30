@@ -41,7 +41,7 @@ router.post("/criarServico", (req, res) => {
 
 //preenche as informações do serviço em seus determinados campos
 //Apenas para o administrador
-router.get("/inserirServico", (req, res) => {
+router.get("/alterarServico", (req, res) => {
     let id_servico = req.query["id_servico"];
 
     const sql = `
@@ -61,7 +61,7 @@ router.get("/inserirServico", (req, res) => {
 });
 //Atualiza o serviço e inser no banco de dados
 //apenas para o administrador
-router.post("/inserirServico", (req, res) => {
+router.post("/alterarServico", (req, res) => {
     let id_servico = req.body["id_servico"];
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
