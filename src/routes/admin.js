@@ -33,15 +33,13 @@ router.post("/criarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.json(rows);
-        
+        res.redirect("/");
     });
-    res.write('<p>SERVICO ADICIONADO COM SUCESSO!</p>');
 });
 
 //preenche as informações do serviço em seus determinados campos
 //Apenas para o administrador
-router.get("/alterarServico", (req, res) => {
+router.get("/editarServico", (req, res) => {
     let id_servico = req.query["id_servico"];
 
     const sql = `
@@ -61,7 +59,7 @@ router.get("/alterarServico", (req, res) => {
 });
 //Atualiza o serviço e inser no banco de dados
 //apenas para o administrador
-router.post("/alterarServico", (req, res) => {
+router.post("/editarServico", (req, res) => {
     let id_servico = req.body["id_servico"];
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
@@ -77,13 +75,13 @@ router.post("/alterarServico", (req, res) => {
     console.log(sql);
 
     db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, id_servico], (err, rows) => {
-		if (err)
+		if (err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
             return;
+        }
+        res.send("atualizado");
 	});
-    res.write('<p>SERVICO ATUALIZADO COM SUCESSO!</p>');
-
 });
     
 
