@@ -10,12 +10,13 @@ router.all("/", (req, res) => {
     res.render("login/login");
 });
 //autenticacão do login
+//Testa a primeira vez para empreiteira e a segunda para administrador MRV
 router.post("/autenticacao", (req, res) => {
     let email = req.body["email"];
     let senha = req.body["senha"];
 
     let sql = `
-        SELECT *
+        SELECT id_empreiteira
         FROM empreiteira
         WHERE 
             senha=? AND 
@@ -29,7 +30,7 @@ router.post("/autenticacao", (req, res) => {
             res.send("Erro: bobao " + err.message);
             return;
         }else if(rows !== undefined){
-            res.render("MRV_admin/usuario-logado-admin");
+            res.redirect("../admin/listarServico?id_empreiteira="+rows["id_empreiteira"]);
         };
     });
 

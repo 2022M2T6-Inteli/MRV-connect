@@ -7,7 +7,7 @@ const router = express.Router();
 router.all("/", (req, res) => {
     res.render("login/cadastro");
 });
-//insere um novo usuário no banco de dados
+//insere uma nova empreiteira no banco de dados
 router.post("/inserirCadastro", (req, res) => {
     let nomeEmpresa = req.body["nomeEmpresa"];
     let cnpjEmpresa = req.body["cnpjEmpresa"];

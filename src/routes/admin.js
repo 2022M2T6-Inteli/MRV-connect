@@ -39,7 +39,8 @@ router.post("/criarServico", (req, res) => {
     res.write('<p>SERVICO ADICIONADO COM SUCESSO!</p>');
 });
 
-//rota para consultar uma obra
+//preenche as informações do serviço em seus determinados campos
+//Apenas para o administrador
 router.get("/inserirServico", (req, res) => {
     let id_servico = req.query["id_servico"];
 
@@ -58,7 +59,8 @@ router.get("/inserirServico", (req, res) => {
             res.render("mrv_admin/editar_servico", {obras: row});
         });
 });
-
+//Atualiza o serviço e inser no banco de dados
+//apenas para o administrador
 router.post("/inserirServico", (req, res) => {
     let id_servico = req.body["id_servico"];
     let nome = req.body["nome"];
@@ -85,8 +87,13 @@ router.post("/inserirServico", (req, res) => {
 });
     
 
-
+//Lista o serviço no feed
+//mesmo endpoint para a empreiteira como para o admin
 router.all("/listarServico", (req, res) => {
+    let id_empreiteira = req.query["id_empreiteira"];
+    let id_administrador = req.query["id_administrador"];
+    
+    console.log(id_empreiteira + " : " + id_administrador);
 
     const sql = `
         SELECT 
@@ -101,7 +108,12 @@ router.all("/listarServico", (req, res) => {
                 return;
             }
             console.log(rows)
-            res.render("mrv_admin/feed", {servicos: rows});
+            //redireciona para o feed necessário
+            if (id_administrador != undefined){
+                res.render("mrv_admin/feed", {servicos: rows});
+            }else{
+                res.render("empreiteira/feed", {servicos: rows});
+            }
         });
 });
 //exporta cadastro para a api.js
