@@ -64,66 +64,95 @@
                 <div class="login">
                     <div class="input-out">
                         <div class="inputs">
-                            <div class="divlogradouro">
-                                <label id="logradouro" for="">*logradouro</label>
-                                <input class="input" type="text" placeholder="  Rua barão de Monte Valtes, 420" /><br>
-                            </div>
-                            <div class="divBEC">
-                                <input class=" input inputMenor" type="text" placeholder="    Bairro" />
-                                <select id="uf" default-value="Estado">
-                                    <option value="Estado">Estado</option>
-                                </select>
-                                <select id="cidade" default-value="Cidade">
-                                    <option value="Cidade">Cidade</option>
-                                </select>
-                            </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="datainit">Data de inicio</th>
-                                        <th>Previsão data final</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="datainit">
-                                            <!-- <input class=" input inputMenor" type="date" placeholder=""> -->
-                                            <input type="date" placeholder="">
-                                        </td>
-                                        <td>
-                                            <input type="date" placeholder="">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="divAreaTamanho">
-                                <div class="divArea">
-                                    <label for="">Serviço:</label>
-                                    <select id="area">
-                                        <option value="0">Serviço</option>
-                                        <option value="1">Pintura</option>
-                                        <option value="2">Elétrica</option>
-                                        <option value="3">Hidraulica</option>
-                                        <option value="4">Gesso</option>
+
+                            <form method="post" action="/admin/criarServico">
+                                <h2>criar serviço</h2>
+                                <div class="divnome">
+                                    <label id="servico_nome" for="">*nome</label>
+                                    <input class="input" name="nome" type="text" placeholder="nome" /><br>
+                                </div>
+                                <div class="divlogradouro">
+                                    <label id="logradouro" for="">*logradouro</label>
+                                    <input class="input" name="logradouro" type="text" placeholder="logradouro" /><br>
+                                </div>
+                                <div class="divBEC">
+                                    <label id="bairroinput" for="">*bairro</label>
+                                    <input class=" input inputMenor" name="bairro" type="text" placeholder="    Bairro" />
+                                    <!--select id="uf" default-value="Estado">
+                                        <option value="Estado">Estado</option>
                                     </select>
+                                    <select id="cidade" default-value="Cidade">
+                                        <option value="Cidade">Cidade</option>
+                                    </select-->
                                 </div>
-                                <div class="divTamanho">
-                                    <label for="">Tamanho da obra em m²</label>
-                                    <input class=" input inputMenor"type="number" placeholder="40 m²">
+
+                                <!--por enquanto vou fazer datas em type text-->
+                                <!--table>
+                                    <thead>
+                                        <tr>
+                                            <th class="datainit">Data de inicio</th>
+                                            <th>Previsão data final</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="datainit"-->
+                                                <!-- <input class=" input inputMenor" type="date" placeholder=""> -->
+                                                <!--input type="date" placeholder="">
+                                            </td>
+                                            <td>
+                                                <input type="date" placeholder="">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table-->
+                                <div>
+                                    <div class="divdataIn">
+                                        <label id="data_inicio" for="">*data inicio</label>
+                                        <input class="input" name="data_abertura" type="text" placeholder="data in" /><br>
+                                    </div>
+                                    <div class="divdataFim">
+                                        <label id="data_fim" for="">*data entrega</label>
+                                        <input class="input" name="data_finadlizacao" type="text" placeholder="data entrega" /><br>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="divDescricao">
-                                <label for="">Descrição</label>
-                                <textarea  maxlength="480" name="descricao" id="descricao" cols="30" rows="10"></textarea>
-                            </div>
-                            <button class="buttonContinuar">Criar Projeto</button>
+                                <div>
+                                    <label id="num" for="">*numero</label>
+                                    <input class="input" name="numero" type="text" placeholder="numero" /><br>
+                                </div>
+                                <!--div class="divAreaTamanho">
+                                    <div class="divArea">
+                                        <label for="">Serviço:</label>
+                                        <select id="area">
+                                            <option value="0">Serviço</option>
+                                            <option value="1">Pintura</option>
+                                            <option value="2">Elétrica</option>
+                                            <option value="3">Hidraulica</option>
+                                            <option value="4">Gesso</option>
+                                        </select>
+                                    </div>
+                                    <div class="divTamanho">
+                                        <label for="">Tamanho da obra em m²</label>
+                                        <input class=" input inputMenor"type="number" placeholder="40 m²">
+                                    </div>
+                                </div-->
+                                <!--div class="divDescricao">
+                                    <label for="">Descrição</label>
+                                    <textarea  maxlength="480" name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                                </div-->
+                                <div>
+                                    <label id="desc" for="">*descricao</label>
+                                    <input class="input" name="descricao" type="text" placeholder="descricao" /><br>
+                                </div>
+                                <button class="buttonContinuar" type="submit">Criar Projeto</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </body>
-    <script src="script.js"></script>
-    <script src="scriptAdm.js"></script>
+    <!--script src="admin.js"></script-->
+    <!--script src="scriptAdm.js"></script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

@@ -71,6 +71,7 @@
         </div>
         <div class="sticky-top">
             <div class="filtro">
+                
                 <h5 class="h5-filtro">Encontre obras para atuar: </h5>
                 <ul class="filter-list">
                     <select id="uf" default-value="Estado">
@@ -93,6 +94,7 @@
         </div>
           <div class="box">
             <div class="block">
+                
                 <div class="text">
                     <h2>Torne-se um colaborador</h2>
                     <h3 aling="justify">Conheça a nossa plataforma. Aqui nós tornamos mais fácil e ágil o processo de colaboração entre nossas empresas.</h3>
@@ -118,9 +120,28 @@
             </div>
         </div>
         <!-- encerrando as boxs -->
+        <a href="/admin/" class="btn btn-primary">Criar</a>
         <h1 id="obrasdisponiveis" class="h1-obras">Obras Disponiveis</h1>
         <!-- começando os cards -->
-        <% for (let i = 0; i < servicos.length; i++) { %>
+        <% for (const servico of servicos) { %>
+            <div class="div-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="../testando/images/predio2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h2>Card</h2>
+                    <h5 class="card-title">nome: <%=servico.nome%></h5>
+                    <p class="card-text">id: <%=servico.id_servico%></p>
+                    <a href="/admin/inserirServico?id_servico=<%=servico.id_servico%>" class="btn btn-primary">Atualizar</a>
+                    <a href="#" class="btn btn-primary">Deletar</a>
+                    
+                    </div>
+                </div>
+                
+            </div>
+        <% } %>
+
+
+        <!--<% for (let i = 0; i < servicos.length; i++) { %>
             <div class="div-card">
                 <div class="card" style="width: 18rem;">
                     <img src="../testando/images/predio2.jpg" class="card-img-top" alt="...">
@@ -130,11 +151,12 @@
                     <p class="card-text">Especialidade: Pintura</p>
                     <a href="/admin/inserirServico?id_servico=<%=servicos[i].id_servico%>" class="btn btn-primary">Atualizar</a>
                     <a href="#" class="btn btn-primary">Deletar</a>
+                    
                     </div>
                 </div>
                 
             </div>
-        <% } %>
+        <% } %>-->
         <div class="seemore"><button id="seemorebutton" class="btn btn-primary" type="button">Mostrar Mais</button></div>
 18h31
 </body>

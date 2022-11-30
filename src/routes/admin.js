@@ -7,23 +7,23 @@ const router = express.Router();
 
 //encaminha para a página de adicionar obras
 router.all("/", (req, res) => {
-    res.render("MRV_admin/modal-adicionarobra");
+    res.render("mrv_admin/criar_servico");
 });
 
 //insere um novo usuário no banco de dados
-router.post("/inserirServico", (req, res) => {
-    let nomeObra = req.body["nomeObra"];
+router.post("/criarServico", (req, res) => {
+    let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
     //let cidade = req.body["cidade"];
     //let estado = req.body["estado"];
-    //let dataInicio = req.body["dataInicio"];
-    //let dataEntrega = req.body["dataEntrega"];
+    let data_abertura = req.body["data_abertura"];
+    let data_finadlizacao = req.body["data_finadlizacao"];
     //let especialidade = req.body["especialidade"];
     let numero = req.body["numero"];
     let descricao = req.body["descricao"];
 
-    const sql = "INSERT INTO servico (nome, logradouro, bairro) VALUES ('"+req.body.nomeObra+"', '"+req.body.logradouro+"', '"+req.body.bairro+"')";
+    const sql = "INSERT INTO servico (nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao) VALUES ('"+req.body.nome+"', '"+req.body.logradouro+"', '"+req.body.bairro+"', '"+req.body.data_abertura+"', '"+req.body.data_finadlizacao+"', '"+req.body.numero+"', '"+req.body.descricao+"')";
 
     console.log(sql);
 
@@ -34,7 +34,9 @@ router.post("/inserirServico", (req, res) => {
             return;
         }
         res.json(rows);
+        
     });
+    res.write('<p>SERVICO ADICIONADO COM SUCESSO!</p>');
 });
 
 //rota para consultar uma obra
@@ -47,15 +49,41 @@ router.get("/inserirServico", (req, res) => {
         WHERE
             id_servico = ?`
 
-        db.get(sql, [id_servico], (err, rows) =>{
+        db.get(sql, [id_servico], (err, row) =>{
             if(err) {
                 console.error(err.message);
                 res.send("Erro: " + err.message);
                 return;
             }
-            res.render("mrv_admin/criar_servico");
+            res.render("mrv_admin/editar_servico", {obras: row});
         });
 });
+
+router.post("/inserirServico", (req, res) => {
+    let id_servico = req.body["id_servico"];
+    let nome = req.body["nome"];
+    let logradouro = req.body["logradouro"];
+    let bairro = req.body["bairro"];
+    let data_abertura = req.body["data_abertura"];
+    let data_finadlizacao = req.body["data_finadlizacao"];
+    let numero = req.body["numero"];
+    let descricao = req.body["descricao"];
+
+    //const sql = "UPDATE servico SET nome='" + req.body.nome + "', logradouro='"+req.body.logradouro+"', bairro='"+req.body.bairro+"', data_abertura='"+req.body.data_abertura+"', data_finadlizacao='"+req.body.data_finadlizacao+"', numero='"+req.body.numero+"', descricao='"+req.body.descricao+"' WHERE id_servico='"+req.body.id_servico+"'";
+    const sql = "UPDATE servico SET nome=?, logradouro=?, bairro=?, data_abertura=?, data_finadlizacao=?, numero=?, descricao=? WHERE id_servico=?";
+
+    console.log(sql);
+
+    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, id_servico], (err, rows) => {
+		if (err)
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+	});
+    res.write('<p>SERVICO ATUALIZADO COM SUCESSO!</p>');
+
+});
+    
 
 
 router.all("/listarServico", (req, res) => {
