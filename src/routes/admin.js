@@ -114,5 +114,31 @@ router.all("/listarServico", (req, res) => {
             }
         });
 });
+
+//deletar um serviço do feed
+router.get("/deletarServico", (req, res) => {
+    let id_servico = req.query["id_servico"];
+    const sql = `
+        DELETE 
+            FROM servico
+            WHERE
+                id_servico = ? `;
+
+
+    db.all(sql, [id_servico], (err, row) => {
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        };  
+        res.redirect("/admin/listarServico")
+    });
+})
+
+
+
+
+
 //exporta cadastro para a api.js
 module.exports = router;
+
