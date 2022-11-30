@@ -1,7 +1,6 @@
 //requisição biblioteca path
 //métodos que facilitam o manuseio dos caminhos dos diretórios
 const path = require("path");
-
 //basicamente utiliza o arquivo env para ser variáveis globais
 require("dotenv").config({
     encoding: "utf8",
@@ -49,10 +48,11 @@ app.use((req, res, next) => {
 });
 
 //Configuração das rotas
-app.use("/", require("./routes/index"));
+//app.use("/", require("./routes/index"));
 app.use("/cadastro", require("./routes/cadastro"));
 app.use("/login", require("./routes/login"));
 app.use("/admin", require("./routes/admin"));
+app.use("/mrvUser", require("./routes/mrvUser"));
 
 
 //erro
