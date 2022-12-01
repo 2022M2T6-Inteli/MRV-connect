@@ -177,36 +177,43 @@ max-width: 100%;
     
   }
 .divlogradouro{
-    padding-left: 5%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     height: 15vh;
 }
 .divBEC{
-    width: 100%;
-    
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 38%;
   }
-.divdatas{
-    padding-left:5%;
+
+.endereco{   
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items:center;
+    justify-content: space-between;
+
+}
+
+.divDatas{
     width: 100%;
     height: 15vh;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
+    justify-items:center;
+    justify-content: space-between;
 
 }
-.divdataInicio{
-    width: 50%;
+.divdataIn{
     display: flex;
     flex-direction: column;
+    width: 45%;
 }
 .divDescricao{
-    padding-left: 10%;
-    margin-top: 4vh;
     display: flex;
     flex-direction: column;
 }
@@ -232,10 +239,18 @@ max-width: 100%;
 }
 
 .divdataFim{
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
 }
+
+.divNum{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+
+}
+
 .login{
     height: 98vh;
     margin: 0 auto;
@@ -300,8 +315,8 @@ select{
 }
 #descricao{
     border-radius: 10px;
-    width: 80%;
-    height: 10vw;
+    width: 87%;
+    height: 7vw;
 }
 
 p{
