@@ -179,7 +179,7 @@ max-width: 100%;
 .divlogradouro{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 76%;
     height: 15vh;
 }
 .divBEC{
@@ -188,7 +188,12 @@ max-width: 100%;
     width: 38%;
   }
 
+.divNome{
+    padding-bottom: 3%;
+}
+
 .endereco{   
+    
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -297,10 +302,18 @@ select{
   background: #FFFFFF;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  
+  border-radius: 10px; 
 }
 
+.inputNome{
+  box-sizing: border-box;
+  width: 95%;
+  height: 7vh;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px; 
+}
 
 .inputMenor{
     width: 55%;
@@ -315,8 +328,8 @@ select{
 }
 #descricao{
     border-radius: 10px;
-    width: 87%;
-    height: 7vw;
+    width: 95%;
+    height: 10vw;
 }
 
 p{
