@@ -94,9 +94,7 @@ router.all("/listarServico", (req, res) => {
     console.log(id_empreiteira + " : " + id_administrador);
 
     const sql = `
-        SELECT 
-            id_servico, 
-            nome
+        SELECT *
         FROM servico`
 
         db.all(sql, (err, rows) =>{
