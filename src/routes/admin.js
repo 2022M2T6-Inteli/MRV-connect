@@ -108,6 +108,7 @@ router.all("/listarServico", (req, res) => {
             console.log(rows)
             //redireciona para o feed necessário
             if (id_administrador != undefined){
+                console.log(rows);
                 res.render("mrv_admin/feed", {servicos: rows});
             }else{
                 res.render("empreiteira/feed", {servicos: rows});

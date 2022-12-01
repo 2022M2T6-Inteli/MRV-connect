@@ -21,13 +21,6 @@ body {
     
 }
 
-
-.nomesnavbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 36vw;
-}
 .nomesnavbar li{
     margin-left: 4vw;
 }
