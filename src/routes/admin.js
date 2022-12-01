@@ -54,7 +54,7 @@ router.get("/editarServico", (req, res) => {
                 res.send("Erro: " + err.message);
                 return;
             }
-            res.render("mrv_admin/editar_servico", {obras: row});
+            res.render("mrv_admin/editar_obra", {obras: row});
         });
 });
 //Atualiza o serviço e inser no banco de dados
@@ -109,9 +109,9 @@ router.all("/listarServico", (req, res) => {
             //redireciona para o feed necessário
             if (id_administrador != undefined){
                 console.log(rows);
-                res.render("mrv_admin/feed", {servicos: rows});
+                res.render("mrv_admin/userMrv_feed", {servicos: rows});
             }else{
-                res.render("empreiteira/feed", {servicos: rows});
+                res.render("empreiteira/empreiteira_logado", {servicos: rows});
             }
         });
 });
