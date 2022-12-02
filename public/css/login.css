@@ -136,7 +136,6 @@ body {
   align-items: center;
   -webkit-box-pack: center;
   -webkit-box-align: center;
-
   height: 80%;
   width: 100%;
 }
@@ -175,10 +174,9 @@ h4{
 
 .buttonContinuar{
 
-
   box-sizing: border-box;
-  width: 80%;
-  height: 56px;
+  width: 50%;
+  height: 40px;
   background: #006B3F;
   border: 1px #006B3F;
   border-radius: 10px ;
