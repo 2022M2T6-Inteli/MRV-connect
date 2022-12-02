@@ -71,7 +71,16 @@ router.post("/editarServico", (req, res) => {
     let descricao = req.body["descricao"];
 
     //const sql = "UPDATE servico SET nome='" + req.body.nome + "', logradouro='"+req.body.logradouro+"', bairro='"+req.body.bairro+"', data_abertura='"+req.body.data_abertura+"', data_finadlizacao='"+req.body.data_finadlizacao+"', numero='"+req.body.numero+"', descricao='"+req.body.descricao+"' WHERE id_servico='"+req.body.id_servico+"'";
-    const sql = "UPDATE servico SET nome=?, logradouro=?, bairro=?, data_abertura=?, data_finadlizacao=?, numero=?, descricao=? WHERE id_servico=?";
+    const sql = `UPDATE servico 
+                    SET 
+                        nome=?, 
+                        logradouro=?, 
+                        bairro=?, 
+                        data_abertura=?, 
+                        data_finadlizacao=?,
+                        numero=?, 
+                        descricao=? 
+                    WHERE id_servico=?`;
 
     console.log(sql);
 
