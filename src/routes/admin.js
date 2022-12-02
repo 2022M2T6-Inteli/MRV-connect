@@ -6,7 +6,7 @@ const db = require('../utils/db');
 const router = express.Router();
 
 //encaminha para a página de adicionar obras
-router.all("/criarServico", (req, res) => {
+router.all("/", (req, res) => {
     res.render("mrv_admin/criar_servico");
 });
 
