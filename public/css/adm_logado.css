@@ -13,8 +13,8 @@
 /* dando orientações para o corpo da pagina, para qual altura ele deve obedecer e não colocando em pixel 
 para poder manter a proporção em outras telas */
 body {
-    
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color:rgb(252,252,252);
     font-family: 'verdanaFont' !important;
     
@@ -110,7 +110,7 @@ body {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #ff961f;
     --bs-btn-disabled-border-color: #ff961f;
-    margin-left: 2vh;
+
 }
 
 .box{
@@ -253,26 +253,53 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .div-card{
-    margin-left: 16% ;
-    margin-right: 10%;
+    /* margin-left: 16% ;
+    margin-right: 10%; */
+    width:68vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
+    margin: 7vh 1vw 0 16vw;
+
 }
 
 .card{
-    height: 50vh !important;
-    margin-right: 7%;
-    margin-top: 7%;
+    height: 60vh !important;
+    width:26vw;
+    /* margin-top: 7%; */
+    margin: 2vh 4vw;
 }
 
+/* .feed_body{
+    width: 100vw;
+    text-align: center;
+} */
+
+
+#card_b{
+    color: #006B3F;
+    text-align: center;
+    display: flex;
+}
+/* .card-body{
+    color: #006B3F;
+} */
+/*
+.cardsss-title{
+    background-color: azure;
+}
+
+.cardsss-text{
+    background-color: aquamarine;
+} */
 
 #seemorebutton{
     width: 20%;
    
 }
+
+
 
 .seemore{
     margin-top: 2%;
