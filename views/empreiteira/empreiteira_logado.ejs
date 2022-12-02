@@ -132,69 +132,27 @@
         </div>
         <!-- encerrando as boxs -->
         <h1 id="obrasdisponiveis" class="h1-obras">Obras Disponiveis</h1>
+        
+        
+        
         <!-- começando os cards -->
         <div class="div-card">
-            <div class="card" style="width: 18rem;">
-                <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h2>São Paulo</h2>
-                <h5 class="card-title"> Região Vila Belmiro</h5>
-                <p class="card-text">Especialidade: Pintura</p>
-                <a href="pagina_servicos.html" class="btn btn-primary">Saiba Mais</a>
+            <% for (let i = 0; i < servicos.length; i++) { %>
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h2><%=servicos[i].nome%></h2>
+                    <h5 class="card-title"><%=servicos[i].bairro%></h5>
+                    <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
+                    <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
+                    <a href="pagina_servicos.html" class="btn btn-primary">Saiba Mais</a>
+                    </div>
                 </div>
-            </div>
+            <% } %> 
 
-            <div class="card" style="width: 18rem;">
-                <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h2>São Paulo</h2>
-                <h5 class="card-title"> Região Vila Belmiro</h5>
-                <p class="card-text">Especialidade: Pintura</p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
-                </div>
-            </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h2>São Paulo</h2>
-                <h5 class="card-title"> Região Vila Belmiro</h5>
-                <p class="card-text">Especialidade: Pintura</p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h2>São Paulo</h2>
-                <h5 class="card-title"> Região Vila Belmiro</h5>
-                <p class="card-text">Especialidade: Pintura</p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h2>São Paulo</h2>
-                <h5 class="card-title"> Região Vila Belmiro</h5>
-                <p class="card-text">Especialidade: Pintura</p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h2>São Paulo</h2>
-                <h5 class="card-title"> Região Vila Belmiro</h5>
-                <p class="card-text">Especialidade: Pintura</p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
-                </div>
-            </div>
-            
         </div>
+
         <div class="seemore"><button id="seemorebutton" class="btn btn-primary" type="button">Mostrar Mais</button></div>
 
 
