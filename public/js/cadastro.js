@@ -6,6 +6,7 @@ let listaInput = [
     [$('#cnpjEmpresa'),$('#inputCnpj'),$('#bolinhadois')],
     [$('#numeroContato'),$('#inputContato'),$('#bolinhatres')],
     [$('#Emailcadastro'),$('#inputEmail'),$('#bolinhaquatro')],
+    [$('#senhacadastro'),$('#inputsenha'),$('#bolinhacinco')],
     
 
 ]
