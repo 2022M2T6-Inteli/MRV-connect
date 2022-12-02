@@ -40,16 +40,16 @@
                 <div class="login">
                     <div class="divlogo" ><img class="logo log" src="../public/images/mrvlogo.png"></div>
                     <div class="input-out">
-                        <form action="">
+                        <form method="post" action="/login/autenticacao">
                             <div class="inputs">
                                 <label id="email" for="">E-MAIL</label>
-                                <input type="email" placeholder="    mauriciogesso@gmail.com" /><br>
+                                <input type="email" name="email" placeholder="    mauriciogesso@gmail.com" /><br>
                                 <div class="senhaesqueceu">
                                     <label for="">SENHA</label>
                                     <button class="buttonEsqueceu">Esqueceu?</button>
                                 </div>
-                                <input type="password" placeholder="    **********" />
-                                <a href="../projeto_frontend/cadastro.html"><p id="cadastro">Não tem cadastro? Cadastre-se</p></a>
+                                <input type="password" name="senha" placeholder="    **********" />
+                                <p id="cadastro">Não tem cadastro? <a href="/cadastro">Cadastre-se</p></a>
                                     <button type="submit" id="buttonContinuar" class="buttonContinuar">Continuar</button>
                             </div>
                         </form>

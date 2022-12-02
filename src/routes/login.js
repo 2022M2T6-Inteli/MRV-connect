@@ -15,6 +15,8 @@ router.post("/autenticacao", (req, res) => {
     let email = req.body["email"];
     let senha = req.body["senha"];
 
+    console.log(email + ":" + senha);
+
     let sql = `
         SELECT id_empreiteira
         FROM empreiteira
@@ -53,6 +55,7 @@ router.post("/autenticacao", (req, res) => {
             console.log(rows);
             res.redirect("../admin/listarServico?id_administrador="+rows["id_administrador"]);
         }else{
+            console.log(rows);
             res.render("login/login");
         };
     });

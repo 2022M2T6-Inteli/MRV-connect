@@ -6,7 +6,7 @@ const db = require('../utils/db');
 const router = express.Router();
 
 //encaminha para a página de adicionar obras
-router.all("/", (req, res) => {
+router.all("/criarServico", (req, res) => {
     res.render("mrv_admin/criar_servico");
 });
 
@@ -33,7 +33,7 @@ router.post("/criarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/");
+        res.redirect("/admin/listarServico");
     });
 });
 
@@ -54,7 +54,8 @@ router.get("/editarServico", (req, res) => {
                 res.send("Erro: " + err.message);
                 return;
             }
-            res.render("mrv_admin/editar_obra", {obras: row});
+            console.log(row);
+            res.render("mrv_admin/editar_servico2", {obra: row});
         });
 });
 //Atualiza o serviço e inser no banco de dados
@@ -80,7 +81,7 @@ router.post("/editarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.send("atualizado");
+        res.redirect("/admin/listarServico");
 	});
 });
     

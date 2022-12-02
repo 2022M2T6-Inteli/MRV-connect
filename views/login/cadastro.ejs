@@ -48,23 +48,23 @@
                         <div class="divlogo"><img class="logo log" src="../public/images/mrvlogo.png" ></div>
                         
                         <div class="inputs">
-                            <form action="/" class="cadastro">
+                            <form method="post" action="/cadastro/inserirCadastro" class="cadastro">
 
                                 <label id="nomeEmpresa" for="">QUAL O NOME DA SUA EMPRESA?</label>
-                                <input id="inputNomeempresa" type="text" placeholder=" Pictures arts"/>
+                                <input id="inputNomeempresa" name="nomeEmpresa" type="text" placeholder=" Pictures arts"/>
 
                                 <label id="cnpjEmpresa"for="" >QUAL O CNPJ DA EMPRESA?</label>
-                                <input id="inputCnpj" type="text" placeholder=" XX.XXX.XXX/0001-XX"  />
+                                <input id="inputCnpj" type="text" name="cnpjEmpresa" placeholder=" XX.XXX.XXX/0001-XX"  />
 
                                 <label id="numeroContato"for=""  >QUAL O SEU NUMERO DE CONTATO?</label>
-                                <input id="inputContato" type="text" placeholder=" (11) 98856-5640"  />
+                                <input id="inputContato" name="contato" type="text" placeholder=" (11) 98856-5640"  />
 
                                 <label id="Emailcadastro"for="" >QUAL O SEU E-MAIL?</label>
-                                <input id="inputEmail" type="email" placeholder=" exemplo@email.com"/>
+                                <input id="inputEmail" name="email" type="email" placeholder=" exemplo@email.com"/>
 
                                 <label id="senhacadastro"for="" >QUAL A SUA SENHA?</label>
                                 
-                                <input id="inputsenha" type="password" placeholder=" *************"/>
+                                <input id="inputsenha" name="senha" type="password" placeholder=" *************"/>
 
                                 <button id="buttonFinalizar" class="buttonContinuar" type="submit">Finalizar Cadatro</button>
                             </form>
