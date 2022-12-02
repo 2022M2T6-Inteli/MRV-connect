@@ -95,17 +95,19 @@
                         <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             
-                            <div class="card-content">
+                            <div class="card-body">
                                 <h2><%=servicos[i].nome%></h2>
                                 <h5 class="card-title"> <%=servicos[i].bairro%></h5>
                                 <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
                                 <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
+                                
+                                <div id = "card_b">
+                                    <a href="/admin/editarServico?id_servico=<%=servicos[i].id_servico%>" id="b_atualizar" class="btn btn-primary">Atualizar</a>
+                                    <a href="/admin/deletarServico?id_servico=<%=servicos[i].id_servico%>" id="b_deletar" class="btn btn-primary">Deletar</a>
+                                </div>
                             </div>
 
-                            <div id = "card_b">
-                                <a href="/admin/editarServico?id_servico=<%=servicos[i].id_servico%>" id="b_atualizar" class="btn btn-primary">Atualizar</a>
-                                <a href="/admin/deletarServico?id_servico=<%=servicos[i].id_servico%>" id="b_deletar" class="btn btn-primary">Deletar</a>
-                            </div>
+
                         </div>
                     </div>
                 <% } %>

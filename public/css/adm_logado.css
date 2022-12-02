@@ -265,10 +265,10 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .card{
-    height: 60vh !important;
+    height: 80vh !important;
     width:26vw;
     /* margin-top: 7%; */
-    margin: 2vh 4vw;
+    /* margin: 2vh 4vw; */
 }
 
 /* .feed_body{
@@ -281,10 +281,12 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     color: #006B3F;
     text-align: center;
     display: flex;
+    
+    
 }
-/* .card-body{
+.card-body{
     color: #006B3F;
-} */
+}
 /*
 .cardsss-title{
     background-color: azure;
