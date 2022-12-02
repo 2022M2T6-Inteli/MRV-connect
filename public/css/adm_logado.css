@@ -255,18 +255,17 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 .div-card{
     /* margin-left: 16% ;
     margin-right: 10%; */
-    width:68vw;
+    /* width:68vw; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 7vh 1vw 0 16vw;
-
 }
 
 .card{
-    height: 80vh !important;
-    width:26vw;
+    /* height: 100vh !important; */
+    width:20vw;
     /* margin-top: 7%; */
     /* margin: 2vh 4vw; */
 }
@@ -276,14 +275,12 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     text-align: center;
 } */
 
-
 #card_b{
     color: #006B3F;
     text-align: center;
-    display: flex;
-    
-    
+    display: flex;    
 }
+
 .card-body{
     color: #006B3F;
 }
@@ -300,8 +297,6 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     width: 20%;
    
 }
-
-
 
 .seemore{
     margin-top: 2%;
