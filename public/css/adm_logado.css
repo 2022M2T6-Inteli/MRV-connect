@@ -110,7 +110,16 @@ body {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #ff961f;
     --bs-btn-disabled-border-color: #ff961f;
+    margin-left: 2vh;
 
+}
+
+.btn_card{
+    width: 30%;
+    height: 7vh;
+    margin: 0 10%;
+    border: 0;
+    background-color: white;
 }
 
 .box{
@@ -255,51 +264,65 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 .div-card{
     /* margin-left: 16% ;
     margin-right: 10%; */
-    width:68vw;
+    /* margin-left: 9% ;
+    margin-right: 5%; */
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 7vh 1vw 0 16vw;
-
 }
 
 .card{
-    height: 60vh !important;
-    width:26vw;
+    margin-right: 3.5%;
+    margin-left: 3.5%;
+    margin-top: 7%;
     /* margin-top: 7%; */
-    margin: 2vh 4vw;
+    /* margin: 2vh 4vw; */
 }
 
 /* .feed_body{
     width: 100vw;
     text-align: center;
 } */
-
-
+.titulo-card{
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    margin-bottom: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #006B3F;
+    color: white;
+}
+.card_line{
+    width:100%;
+}
+.card_date{
+    display: flex;
+}
 #card_b{
-    color: #006B3F;
+    width: 100%;
     text-align: center;
     display: flex;
 }
-/* .card-body{
-    color: #006B3F;
-} */
+
 /*
 .cardsss-title{
     background-color: azure;
 }
-
-.cardsss-text{
-    background-color: aquamarine;
-} */
+*/
+.card-text{
+    font-size: 2vh;
+    text-align: left;
+    width:30%;
+    margin:0 20% 0 0;
+} 
 
 #seemorebutton{
     width: 20%;
    
 }
-
-
 
 .seemore{
     margin-top: 2%;
