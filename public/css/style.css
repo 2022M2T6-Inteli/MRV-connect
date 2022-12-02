@@ -211,7 +211,26 @@ body {
     margin-left: 2vh;
 }
 
+.btn_sm{
 
+
+    width: 40%;
+    height: 7vh;
+    margin: 10% 30% 0 30%;
+    --bs-btn-color: #fff;
+    background-color: #ff961f !important;
+    --bs-btn-border-color: #ff961f;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ff961f;
+    --bs-btn-hover-border-color: #ff961f;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ff961f;
+    --bs-btn-active-border-color: #ff961f;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #ff961f;
+    --bs-btn-disabled-border-color: #ff961f;
+}
 
 .box{
     width: 100% ;
@@ -344,8 +363,7 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .div-card{
-    margin-left: 9% ;
-    margin-right: 5%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,10 +372,39 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .card{
-    margin-right: 7%;
+    margin-right: 3.5%;
+    margin-left: 3.5%;
     margin-top: 7%;
 }
 
+.titulo-card{
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    margin-bottom: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #006B3F;
+    color: white;
+}
+
+.card_line{
+    width:100%;
+}
+.card_date{
+    display: flex;
+}
+.card-text{
+    font-size: 2vh;
+    text-align: left;
+    width:30%;
+    margin:0 20% 0 0;
+} 
+#card_b{
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
 
 #seemorebutton{
     width: 20%;
@@ -471,11 +518,11 @@ footer .rodado {
 
 
     .btn-primary {
-        width: 15vw;
+        width: 30%;
         height: 7vh;
         --bs-btn-color: #fff;
         background-color: #ff961f !important;
-        font-size: 14px;
+        font-size: 14px; 
     }
     #buttonsearch{
         width: 10vw;

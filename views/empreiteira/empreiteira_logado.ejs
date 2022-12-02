@@ -139,18 +139,21 @@
         <div class="div-card">
             <% for (let i = 0; i < servicos.length; i++) { %>
                 <div class="card" style="width: 18rem;">
-                    <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
+                    <h2 class="titulo-card"><%=servicos[i].bairro%></h2>
+                    <img src="../public/images/predio2.jpg" class="card-img-top" alt="..." style="border-radius:0%;">
                     <div class="card-body">
-                    <h2><%=servicos[i].nome%></h2>
-                    <h5 class="card-title"><%=servicos[i].bairro%></h5>
-                    <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
-                    <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
-                    <a href="pagina_servicos.html" class="btn btn-primary">Saiba Mais</a>
+                        <h2><%=servicos[i].nome%></h2>
+                        <hr class="card_line">
+                        <div class="card_date">
+                            <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
+                            <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
+                        </div>
+                        <div id="card_b">
+                            <a href="pagina_servicos.html" class="btn btn_sm">Saiba Mais</a>
+                        </div>    
                     </div>
                 </div>
             <% } %> 
-
-
         </div>
 
         <div class="seemore"><button id="seemorebutton" class="btn btn-primary" type="button">Mostrar Mais</button></div>
