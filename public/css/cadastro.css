@@ -223,12 +223,12 @@ button .buttonEsqueceu{
 }
 
 #buttonProximo{
-  height: 35%;
+  height: 50%;
 }
 
 #buttonFinalizar{
-  margin-top: 5vh;
-  height: 30%;
+  margin-top: 7vh;
+  height: 50%;
 }
 
 .senhaesqueceu{
@@ -236,4 +236,25 @@ button .buttonEsqueceu{
   display: flex;
   justify-content: space-between;
   
+}
+
+/* Alinha placeholder */
+#inputNomeempresa::placeholder {
+  text-align: center;
+}
+
+#inputCnpj::placeholder {
+  text-align: center;
+}
+
+#inputContato::placeholder {
+  text-align: center;
+}
+
+#inputEmail::placeholder {
+  text-align: center;
+}
+
+#inputsenha::placeholder {
+  text-align: center;
 }
