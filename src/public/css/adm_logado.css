@@ -255,6 +255,8 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 /* terminando o carrossel */
 
+
+/* Estrutura dos cards */
 .h1-obras{
     display: flex;
     justify-content: center;
@@ -262,10 +264,6 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .div-card{
-    /* margin-left: 16% ;
-    margin-right: 10%; */
-    /* margin-left: 9% ;
-    margin-right: 5%; */
     margin: auto;
     display: flex;
     justify-content: center;
@@ -277,14 +275,8 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     margin-right: 3.5%;
     margin-left: 3.5%;
     margin-top: 7%;
-    /* margin-top: 7%; */
-    /* margin: 2vh 4vw; */
 }
 
-/* .feed_body{
-    width: 100vw;
-    text-align: center;
-} */
 .titulo-card{
     border-top-left-radius:5px;
     border-top-right-radius:5px;
@@ -295,23 +287,21 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     background-color: #006B3F;
     color: white;
 }
+
 .card_line{
     width:100%;
 }
+
 .card_date{
     display: flex;
 }
+
 #card_b{
     width: 100%;
     text-align: center;
     display: flex;
 }
 
-/*
-.cardsss-title{
-    background-color: azure;
-}
-*/
 .card-text{
     font-size: 2vh;
     text-align: left;
@@ -320,8 +310,7 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 } 
 
 #seemorebutton{
-    width: 20%;
-   
+    width: 20%; 
 }
 
 .seemore{

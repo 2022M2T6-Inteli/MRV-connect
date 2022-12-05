@@ -21,20 +21,23 @@ body {
     
 }
 
-
+/* Estrutura nav bar */
 .nomesnavbar{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 36vw;
 }
+
 .nomesnavbar li{
     margin-left: 4vw;
 }
+
 .logo{
     margin-left: 2vw;
     height: 5vh;
 }
+
 .voltar{
     height: 3vh;
     margin-right: 2vw;
@@ -44,8 +47,8 @@ body {
 #navbarScroll{
     display: flex;
     justify-content:right !important;
-    
 }
+
 .navbar-collapse{
     flex-grow: 0;
 }
@@ -70,43 +73,38 @@ body {
 
 /* NAVBAR ACABOU AQUI */
 
-/* .divtotal{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+/* Imagem a esquerda */
 #divimagem{
   width:45vw;
   height:90vh;
   float:left;
   background-color:#ff1;  
   display: initial;
-  
   z-index: 6;
   overflow: hidden;
 }
+
 #divimagem > img {
   width: 100%;
   height: 100%;
 }
 
-
 .divtotal{
   width: 100vw;
-  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Caixa com as informações de cadastro */
 .divlogin{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 55vw;
   height: 90vh;
-  
 }
+
 .login{
   height: 70%;
   margin: 0 auto;
@@ -148,7 +146,6 @@ background: #FFFFFF;
 border: 1px solid #000000;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
-
 }
 
 p{
@@ -156,9 +153,9 @@ p{
   margin-top: 2vh;
 }
 h4{
- 
   font-size: 18px;
 }
+
 .buttonEsqueceu{
   width: 20%;
   border: none;
@@ -173,7 +170,6 @@ h4{
 }
 
 .buttonContinuar{
-
   box-sizing: border-box;
   width: 50%;
   height: 40px;
@@ -183,6 +179,7 @@ h4{
   color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 button .buttonEsqueceu{
   margin-right: 2vw;
 }
@@ -200,8 +197,6 @@ button .buttonEsqueceu{
 #nomeEmpresa{
   margin-top: 10vh;
 }
-
-
 
 #myModal{
     width: 100vw;

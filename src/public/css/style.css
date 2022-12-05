@@ -20,13 +20,13 @@ body {
     
 }
 
-
 .nomesnavbar{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 28vw;
 }
+
 .nomesnavbar li{
     margin-left: 5vw;
 }
@@ -38,8 +38,8 @@ body {
 #navbarScroll{
     display: flex;
     justify-content:right !important;
-    
 }
+
 .navbar-collapse{
     flex-grow: 0;
 }
@@ -52,10 +52,10 @@ body {
 .imagemnotf{
     height: 6vh;
 }
+
 #open-modal {
     background-color: #14b246;
   }
-  
   
   #fade {
     position: fixed;
@@ -147,11 +147,6 @@ body {
     border-color: #FFB719;
   }
 
-
-
-
-
-
 .filtro{
     width: 100%;
     height: 12vh;
@@ -159,8 +154,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
 
 .filtro select {
@@ -173,6 +166,7 @@ body {
     line-height: 1.5;
     padding: 1rem 1rem;
 }
+
 .h5-filtro{
     font-size: 15px;
     color:white;
@@ -181,7 +175,6 @@ body {
 .sticky-top{
     z-index: 21;
 }
-
 
 .dropdown-menu{
     z-index: 22;
@@ -212,8 +205,6 @@ body {
 }
 
 .btn_sm{
-
-
     width: 40%;
     height: 7vh;
     margin: 10% 30% 0 30%;
@@ -235,12 +226,9 @@ body {
 .box{
     width: 100% ;
     height: 65vh;
-    /* #353432 */
-    /* #ed9f02 */
     background-color: #353432;
     display: flex;
     justify-content: center;
-
 }
 
 /* o block é a segunda box que esta dentro da primeira, aqui definimos a cor, a borda arredondada, os seus itens alinhados corretamente e uma margin
@@ -258,13 +246,13 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     margin-top: 9%;
     box-shadow: 10px;
 }
+
 /* ajustamos a imagem dentro da box block */
 .block img{
     width: 100%;
     height: 100%;
     position: absolute;
     border-top-left-radius: 0.5rem;
-
 }
 
 /* posicionamento do texto, fazendo com que ele fique 30 porcento acima da margem final do block box e 5 porcento a esquerda da margin final */
@@ -283,6 +271,7 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     transition: transform 0.5s;
     font-size: 30px;
 }
+
 /* Colocando um alinhamento do texto a esquerda, com o tamanho de 45 porcento da block box e a sua cor como branca */
 .block .text h3 {
     max-width: 45%;
@@ -291,8 +280,8 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     transform: translateX(-20px);
     transition: transform 0.5s;
     font-size: 20px;
-
 }
+
 /* começando a mexer no carrossel das imagens, ainda não esta pronto, porém está com algumas de suas definições */
 .sectioncontainer {
     width: 50%;
@@ -418,81 +407,6 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     align-items: center;
 }
 
-
-
-/* começando o footer */
-/* colocando o tamanho do footer, a sua cor de fundo, e alinhando onde seus itens ficarão melhor posicionado, 
-com o padding, justify content e display sendo flex */
-/* footer{
-    background-image: linear-gradient(45deg, #006B3F, #079D56);
-    margin-top: 10vh;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    padding: 70px;
-    
-}
-
-/* linha abaixo dos titulos, criando a altura, a largura e a cor da linha e o melhor posicionamento dela abaixo do titulo */
-/* hr{
-    width: 40%;
-    height: 6px;
-    background-color: white;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-footer .sustentabilidade {
-    position: absolute;
-    top: 42%;
-    left: 48.5%;
-    width: 15% !important
-} */
-
-/* alinhando as colunas ex: contato e imavbeis a venda e colocando as fonts com padrão de 20px dentro do seu respectivo tamanho */
-/* footer div{
-    text-align: left;
-    font-size: 20px;
-    padding: 5px;
-    
-}
-.position-absolute{
- position:static !important;
- 
-} */
-/* ajustando as listas e as alinhando para a esquerda, colocando o tamanho da fonte e a cor como branca */
-/* footer li{
-    text-align: left;
-    
-    color: #fff;
-    list-style: none;
-    font-size: 15px;
-}
-
- footer li a{
-    color:#fff
-}
-
-
-footer li.listDesk {
-    float: left;
-    margin: 0 16px !important;
-    width: 13%
-}
-
-
-footer .rodado {
-    display: inline-block;
-    transform: rotate(180deg);
-    transition: all .3s ease-in-out
-} */ 
-
-
-/* terminando footer */
-
 @media screen and (max-width: 768px) {
     .filtro{
         min-width: 100%;
@@ -502,9 +416,8 @@ footer .rodado {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-    
     }
+
     .filtro select {
         min-width: 5vw;
         min-height: 2vh;
@@ -516,7 +429,6 @@ footer .rodado {
         padding: 1rem 1rem;
     }
 
-
     .btn-primary {
         width: 30%;
         height: 7vh;
@@ -524,10 +436,12 @@ footer .rodado {
         background-color: #ff961f !important;
         font-size: 14px; 
     }
+
     #buttonsearch{
         width: 10vw;
         height: 7vh;
     }
+
     /* posicionamento do texto, fazendo com que ele fique 30 porcento acima da margem final do block box e 5 porcento a esquerda da margin final */
     .block .text {
         position: absolute;
@@ -542,18 +456,18 @@ footer .rodado {
         margin-left: 1vw;
         font-size: 18px;
     }
+
     /* Colocando um alinhamento do texto a esquerda, com o tamanho de 45 porcento da block box e a sua cor como branca */
     .block .text h3 {
         max-width: 45%;
         font-size: 13px;
-
     }
+
     .card{
         height: 55vh !important;
         margin-right: 7%;
         margin-top: 7%;
     }
-    
 }
 
 @media screen and (max-width: 480px) {
@@ -565,9 +479,8 @@ footer .rodado {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-    
     }
+
     .filtro select {
         min-width: 1vw ;
         min-height: 2vh ;
@@ -579,7 +492,6 @@ footer .rodado {
         padding: 1rem 1rem;
     }
 
-
     .btn-primary {
         width: 40%;
         height: 7vh;
@@ -587,10 +499,11 @@ footer .rodado {
         background-color: #ff961f !important;
         font-size: 90%;
     }
-    #buttonsearch{
 
+    #buttonsearch{
         height: 7vh;
     }
+
     /* posicionamento do texto, fazendo com que ele fique 30 porcento acima da margem final do block box e 5 porcento a esquerda da margin final */
     .block .text {
         position: absolute;
@@ -605,22 +518,21 @@ footer .rodado {
         margin-left: 1vw;
         font-size: 18px;
     }
+
     /* Colocando um alinhamento do texto a esquerda, com o tamanho de 45 porcento da block box e a sua cor como branca */
     .block .text h3 {
         max-width: 45%;
         font-size: 13px;
-
     }
+
     .card{
         height: 55vh !important;
         margin-right: 7%;
         margin-top: 7%;
     }
-
 }
 
   /*Edicao rodape*/
-
   .logo-rodape{
     padding: 10vh;
     justify-content: center;

@@ -37,6 +37,8 @@
     text-align: center;
   }
   
+
+  /* Estrutura dos cards */
   .div-card{
     margin-left: 8% ;
     margin-right: 5%;
@@ -44,7 +46,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
   }
   
   .card{
@@ -67,14 +68,12 @@
     text-align: center;
     justify-content: center;
     background-color: #006B3F;
-    
     color: white;
   }
 
   .card-img, .card-img-top{
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    
   }
 
   .div-card-obras{
@@ -92,7 +91,6 @@
     flex-direction: column;
     justify-content: left;
     align-items: left;
-
   }
 
   #descricao2{
@@ -143,7 +141,6 @@
 
   .borda-notificacoes4{
     display: flex;
-    /* margin: 0 auto; */
     width: 49%;
     border-radius: 10px;
     border: 1px solid orange;
