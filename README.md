@@ -12,8 +12,10 @@
 - <a href="https://www.linkedin.com/in/lfcovas97">Luiz Fernando Covas</a>
 - <a href="https://www.linkedin.com/in/mauricio-felicissimo-475024240">Mauricio Felicissimo</a>
 - <a href="https://www.linkedin.com/in/yago-phellipe">Yago Phellipe Matos</a>
+- 
 ## :memo: Descrição
 O projeto visa atuar em dois problemas: a escassez de mão de obra nos canteiros, algo que é relatado por todo setor da construção civil; e a contratação manual e lenta de empreiteiros devido a todas as particularidades de uma empresa que atua em todo o território nacional. Com o objetivo de automatizar o processo de contratação, garantindo acessibilidade para todos os prestadores de serviço em seus locais de origem. Criar um ambiente de fácil acesso com disponibilização de oportunidades de trabalho para prestadores de serviços locais.
+
 ## :file_folder: Estrutura de pastas
 |-->documentos<br>
 |--> imagens<br>
@@ -30,6 +32,7 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 - <b>src</b>: nesta pasta encontra-se todo o código fonte do sistema (existem subpastas que contêm, respectivamente, o código do servidor e o código da página web).
 - <b>data</b>: com acesso ao banco de dados em SQL.
 - <b>node_modules</b>: nesta pasta é possível verificar as bibliotecas pala desenvolvimento de aplicação web.
+
 ## :computer: Configuração para desenvolvimento
 Aqui encontram-se todas as instruções necessárias para a instalação de todos os programas, bibliotecas e ferramentas imprescindíveis para a configuração do ambiente de desenvolvimento.
 1.  Baixar e instalar o node.js:  [https://nodejs.org/pt-br/](https://nodejs.org/pt-br/) (versão 16.15.1 LTS)
