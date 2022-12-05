@@ -33,7 +33,7 @@ router.post("/criarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/admin/listarServico");
+        res.redirect("/servico/listarServico");
     });
 });
 
@@ -90,7 +90,7 @@ router.post("/editarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/admin/listarServico");
+        res.redirect("/servico/listarServico");
 	});
 });
     
@@ -117,7 +117,7 @@ router.all("/listarServico", (req, res) => {
             //redireciona para o feed necessário
             if (id_administrador != undefined){
                 console.log(rows);
-                res.render("mrv_admin/userMrv_feed", {servicos: rows});
+                res.render("mrv_admin/userMrv_feed", {servicos: rows, id : id_empreiteira});
             }else{
                 res.render("empreiteira/empreiteira_logado", {servicos: rows});
             }
@@ -140,7 +140,7 @@ router.get("/deletarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         };  
-        res.redirect("/admin/listarServico")
+        res.redirect("/servico/listarServico")
     });
 })
 

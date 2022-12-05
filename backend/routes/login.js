@@ -32,7 +32,7 @@ router.post("/autenticacao", (req, res) => {
             res.send("Erro: bobao " + err.message);
             return;
         }else if(rows !== undefined){
-            res.redirect("../admin/listarServico?id_empreiteira="+rows["id_empreiteira"]);
+            res.redirect("../servico/listarServico?id_empreiteira="+rows["id_empreiteira"]);
         };
     });
 
@@ -53,7 +53,7 @@ router.post("/autenticacao", (req, res) => {
         }else if(rows !== undefined){
             console.log(rows["id_administrador"]);
             console.log(rows);
-            res.redirect("../admin/listarServico?id_administrador="+rows["id_administrador"]);
+            res.redirect("../servico/listarServico?id_administrador="+rows["id_administrador"]);
         }else{
             console.log(rows);
             res.render("login/login");
