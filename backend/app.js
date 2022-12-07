@@ -54,6 +54,8 @@ app.use("/login", require("./routes/login"));
 app.use("/servico", require("./routes/servico"));
 app.use("/mrv", require("./routes/mrv"));
 app.use("/mrvUser", require("./routes/mrvUser"));
+app.use("/feed", require("./routes/feed"));
+
 
 
 //erro

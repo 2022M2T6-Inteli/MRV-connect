@@ -93,36 +93,6 @@ router.post("/editarServico", (req, res) => {
         res.redirect("/servico/listarServico");
 	});
 });
-    
-
-//Lista o serviço no feed
-//mesmo endpoint para a empreiteira como para o admin
-router.all("/listarServico", (req, res) => {
-    let id_empreiteira = req.query["id_empreiteira"];
-    let id_administrador = req.query["id_administrador"];
-    
-    console.log(id_empreiteira + " : " + id_administrador);
-
-    const sql = `
-        SELECT *
-        FROM servico`
-
-        db.all(sql, (err, rows) =>{
-            if(err) {
-                console.error(err.message);
-                res.send("Erro: " + err.message);
-                return;
-            }
-            console.log(rows)
-            //redireciona para o feed necessário
-            if (id_administrador != undefined){
-                console.log(rows);
-                res.render("mrv_admin/userMrv_feed", {servicos: rows, id : id_empreiteira});
-            }else{
-                res.render("empreiteira/empreiteira_logado", {servicos: rows});
-            }
-        });
-});
 
 //deletar um serviço do feed
 router.get("/deletarServico", (req, res) => {

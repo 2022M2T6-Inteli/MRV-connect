@@ -12,8 +12,6 @@ let query;
 if (isMrv > -1) {
     let a = $('.link').attr('href');
     $('.link').attr('href', a+"&"+url.substring(isMrv, url.length));
-    //$(".link").attr('name', url+"&id_administrador="+query);
-    //conaole.log($(".link"));
 }else if (isEmpreiteira > -1) {
     query = url.substring(isMrv+15, url.length);
     console.log(query);
