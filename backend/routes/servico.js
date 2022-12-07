@@ -82,8 +82,6 @@ router.post("/editarServico", (req, res) => {
                         descricao=? 
                     WHERE id_servico=?`;
 
-    console.log(sql);
-
     db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, id_servico], (err, rows) => {
 		if (err) {
             console.error(err.message);
