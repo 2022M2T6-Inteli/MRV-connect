@@ -61,7 +61,7 @@ router.get("/editarServico", (req, res) => {
 //Atualiza o serviço e inser no banco de dados
 //apenas para o administrador
 router.post("/editarServico", (req, res) => {
-    let id_servico = req.body["id_servico"];
+    let id_servico = req.query["id_servico"];
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
@@ -82,13 +82,16 @@ router.post("/editarServico", (req, res) => {
                         descricao=? 
                     WHERE id_servico=?`;
 
+
     db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, id_servico], (err, rows) => {
 		if (err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/feed/mrv?");
+        console.log(rows);
+        res.json(rows);
+        //res.redirect("/feed/mrv?");
 	});
 });
 
