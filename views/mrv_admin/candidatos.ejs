@@ -53,61 +53,23 @@
        
 
         <table id="customers">
-        <tr>
-            <th>Nome empreiteira</th>
-            <th>Telefone</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td><img src="../public/images/aceito.png"></td>
-        </tr>
-        <tr>
-            <td>Berglunds snabbköp</td>
-            <td>Christina Berglund</td>
-            <td><img src="../public/images/aceito.png"></td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td><img src="../public/images/relogio-de-areia.png"></td>
-        </tr>
-        <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td><img src="../public/images/aceito.png"></td>
-        </tr>
-        <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td><img src="../public/images/rejeitado.png"></td>
-        </tr>
-        <tr>
-            <td>Königlich Essen</td>
-            <td>Philip Cramer</td>
-            <td><img src="../public/images/relogio-de-areia.png"></td>
-        </tr>
-        <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td><img src="../public/images/rejeitado.png"></td>
-        </tr>
-        <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td><img src="../public/images/rejeitado.png"></td>
-        </tr>
-        <tr>
-            <td>North/South</td>
-            <td>Simon Crowther</td>
-            <td><img src="../public/images/relogio-de-areia.png"></td>
-        </tr>
-        <tr>
-            <td>Paris spécialités</td>
-            <td>Marie Bertrand</td>
-            <td><img src="../public/images/rejeitado.png"></td>
-        </tr>
+            <tr>
+                <th>Nome empreiteira</th>
+                <th>Telefone</th>
+                <th>ID do serviço</th>
+            </tr>
+
+            <% for (let i = 0; i < candidatos.length; i++) { %>
+
+                <tr>
+                    <td><%-candidatos[i].nome_fantasia%></td>
+                    <td><%-candidatos[i].telefone%></td>
+                    <td><%-candidatos[i].id_servico%></td>
+                    <td><img src="../public/images/aceito.png"></td>
+                </tr>
+
+            <% } %>
+
         </table>
     </div>
 

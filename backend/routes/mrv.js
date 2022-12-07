@@ -74,10 +74,10 @@ router.all("/", (req, res) => {
     res.render("/lista_empreiteiras");
 });
 
-//Lista as empreiteiras
+//Lista as empreiteiras cadastradas no site
 router.get("/lista_empreiteiras", (req, res) => {
     const sql = `
-        SELECT id_empreiteira, nome_fantasia, telefone, email cnpj
+        SELECT id_empreiteira, nome_fantasia, telefone, cnpj
         FROM empreiteira`
 
         db.all(sql, (err, rows) =>{
@@ -88,6 +88,38 @@ router.get("/lista_empreiteiras", (req, res) => {
             }else{
             //redireciona para o feed necessário
             res.render("mrv_admin/lista_empreiteiras", {lista:rows});
+            }
+        });
+});
+
+
+
+
+
+
+//encaminha para a página de lista de empreiteiras que se candidataram
+router.all("/", (req, res) => {
+    res.render("/candidatos");
+});
+
+//Lista as empreiteiras que se candidataram 
+router.get("/candidatos", (req, res) => {
+    const sql = `
+        SELECT empreiteira.nome_fantasia, empreiteira.telefone, inscricao.id_servico
+        FROM empreiteira 
+        LEFT JOIN inscricao 
+        ON empreiteira.id_empreiteira = inscricao.id_empreiteira  `
+
+
+        db.all(sql, (err, rows) =>{
+            if(err) {
+                console.error(err.message);
+                res.send("Erro: " + err.message);
+                return;
+            }else{
+            //redireciona para o feed necessário
+            console.log(rows)
+            res.render("mrv_admin/candidatos", {candidatos:rows});
             }
         });
 });
