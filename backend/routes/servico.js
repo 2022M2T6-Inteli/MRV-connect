@@ -33,7 +33,7 @@ router.post("/criarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/servico/listarServico");
+        res.redirect("/feed/mrv");
     });
 });
 
@@ -90,7 +90,7 @@ router.post("/editarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/servico/listarServico");
+        res.redirect("/feed/mrv?");
 	});
 });
 
@@ -110,7 +110,7 @@ router.get("/deletarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         };  
-        res.redirect("/servico/listarServico")
+        res.redirect("/feed/mrv?")
     });
 })
 
