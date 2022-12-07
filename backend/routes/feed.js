@@ -6,7 +6,6 @@ const router = express.Router();
 
 
 router.get("/empreiteira", (req, res) => {
-    let id_empreiteira = req.query["id_empreiteira"];
 
     const sql = `
         SELECT *
@@ -24,7 +23,6 @@ router.get("/empreiteira", (req, res) => {
 });
 
 router.get("/mrv", (req, res) => {
-    let id_administrador = req.query["id_administrador"];
 
     const sql = `
         SELECT *
