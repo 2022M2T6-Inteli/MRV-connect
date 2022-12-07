@@ -55,6 +55,8 @@ app.use("/servico", require("./routes/servico"));
 app.use("/mrv", require("./routes/mrv"));
 app.use("/mrvUser", require("./routes/mrvUser"));
 app.use("/feed", require("./routes/feed"));
+app.use("/empreiteira", require("./routes/empreiteira"));
+app.use("/empreiteira_perfil", require("./routes/empreiteira_perfil"));
 
 
 
