@@ -67,4 +67,29 @@ router.post("/avaliacaoEmpreiteira", (req, res) => {
     });
 });
 
+
+
+//encaminha para a página de lista de empreiteiras
+router.all("/", (req, res) => {
+    res.render("/lista_empreiteiras");
+});
+
+//Lista as empreiteiras
+router.get("/lista_empreiteiras", (req, res) => {
+    const sql = `
+        SELECT id_empreiteira, nome_fantasia, telefone, email cnpj
+        FROM empreiteira`
+
+        db.all(sql, (err, rows) =>{
+            if(err) {
+                console.error(err.message);
+                res.send("Erro: " + err.message);
+                return;
+            }else{
+            //redireciona para o feed necessário
+            res.render("mrv_admin/lista_empreiteiras", {lista:rows});
+            }
+        });
+});
+
 module.exports = router;
