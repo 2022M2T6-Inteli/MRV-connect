@@ -1,18 +1,18 @@
-console.log(document.URL);
+//Possibilita passar para todas as urls o id do user, para ele nunca ser perdidio enquanto não utilizamos um token + cookies
 let url = document.URL;
 
 let isEmpreiteira = url.search("id_empreiteira=");//15 caracteres
-let isMrv = url.search("id_administrador=");//17 caracteres
+let isMrv = url.search("id");//17 caracteres
 
-console.log(isMrv);
-console.log(url.substring(isMrv, url.length));
-
-let query;
-
+//Verifica qual tipo de usuário é e envia para as tags <a> que possuem a classe chamada link o id do usuário no final do atributo href
 if (isMrv > -1) {
-    let a = $('.link').attr('href');
-    $('.link').attr('href', a+"&"+url.substring(isMrv, url.length));
+    let tag = $('.link').attr('href');
+    $('link').each(function(index, value){
+        this.href = this.href+"&"+url.substring(isMrv, url.length);
+        console.log(this.href);
+    });
+    //$('.link').attr('href', tag+"&"+url.substring(isMrv, url.length));
 }else if (isEmpreiteira > -1) {
-    query = url.substring(isMrv+15, url.length);
-    console.log(query);
+    let tag = $('.link').attr('href');
+    $('.link').attr('href', tag+"&"+url.substring(isEmpreiteira, url.length));
 };

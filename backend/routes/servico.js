@@ -12,6 +12,7 @@ router.all("/", (req, res) => {
 
 //insere um novo usuário no banco de dados
 router.post("/criarServico", (req, res) => {
+    let id_administrador = req.query["id_administrador"];
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
@@ -33,7 +34,7 @@ router.post("/criarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/feed/mrv");
+        res.redirect("/feed/mrv?id_administrador="+id_administrador);
     });
 });
 
@@ -89,9 +90,7 @@ router.post("/editarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        console.log(rows);
-        res.json(rows);
-        //res.redirect("/feed/mrv?");
+        res.redirect("/feed/mrv?");
 	});
 });
 
