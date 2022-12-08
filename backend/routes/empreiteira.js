@@ -5,7 +5,6 @@ const express = require("express");
 const db = require('../utils/db');
 //middleware de roteamento
 const router = express.Router();
-router.get()
 router.get("/perfilEmpreiteira", (req, res) => {
     let id_empreiteira = req.query["id_empreiteira"];
     const sql = `
