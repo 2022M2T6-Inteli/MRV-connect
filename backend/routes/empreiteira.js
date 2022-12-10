@@ -5,7 +5,10 @@ const express = require("express");
 const db = require('../utils/db');
 //middleware de roteamento
 const router = express.Router();
+
+
 router.get("/perfilEmpreiteira", (req, res) => {
+    
     let id_empreiteira = req.query["id_empreiteira"];
     const sql = `
         SELECT *
@@ -19,9 +22,11 @@ router.get("/perfilEmpreiteira", (req, res) => {
                 return;
             }
             console.log(row);
-            res.render("/", {obra: row});
+            res.json(row)
+            //res.render("/", {obra: row});
         });
 });
+
 router.post("/editarPerfilEmpreiteira", (req, res) => {
     let id_empreiteira = req.query["id_empreiteira"];
     let id_cidade = req.body["id_cidade"];
