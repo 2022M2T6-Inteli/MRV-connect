@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 });
 
 //Configuração das rotas
-//app.use("/", require("./routes/index"));
+app.use("/", require("./routes/index"));
 app.use("/cadastro", require("./routes/cadastro"));
 app.use("/login", require("./routes/login"));
 app.use("/servico", require("./routes/servico"));
