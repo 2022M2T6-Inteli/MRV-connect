@@ -6,28 +6,51 @@ const db = require('../utils/db');
 //middleware de roteamento
 const router = express.Router();
 
+//-------CARREGAR O PERFIL --------
+router.get("/perfil", (req, res) => {
 
-router.get("/perfilEmpreiteira", (req, res) => {
-    
     let id_empreiteira = req.query["id_empreiteira"];
     const sql = `
         SELECT *
         FROM empreiteira
         WHERE
             id_empreiteira = ?`
-        db.get(sql, [id_empreiteira], (err, row) =>{
-            if(err) {
-                console.error(err.message);
-                res.send("Erro: " + err.message);
-                return;
-            }
-            console.log(row);
-            res.json(row)
-            //res.render("/", {obra: row});
-        });
+
+    db.get(sql, [id_empreiteira], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.json({message:row});
+        //res.render("/", {obra: row});
+    });
 });
 
-router.post("/editarPerfilEmpreiteira", (req, res) => {
+//------EDITAR PERFIL----------
+router.get("/editarPerfil", (req, res) => {
+
+    let id_empreiteira = req.query["id_empreiteira"];
+    const sql = `
+        SELECT *
+        FROM empreiteira
+        WHERE
+            id_empreiteira = ?`
+
+    db.get(sql, [id_empreiteira], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.json({message:row});
+        //res.render("/", {obra: row});
+    });
+});
+
+router.post("/editarPerfil", (req, res) => {
     let id_empreiteira = req.query["id_empreiteira"];
     let id_cidade = req.body["id_cidade"];
     let cnpj = req.body["cnpj"];
@@ -69,4 +92,8 @@ router.post("/editarPerfilEmpreiteira", (req, res) => {
         res.redirect("/");
 	});
 });
+
+
+
+
 module.exports = router;

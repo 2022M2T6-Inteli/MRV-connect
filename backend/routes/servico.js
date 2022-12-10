@@ -1,4 +1,5 @@
 //requisição express + banco de dados
+const { application } = require("express");
 const express = require("express");
 const db = require('../utils/db');
 
@@ -114,10 +115,29 @@ router.get("/deletarServico", (req, res) => {
     });
 })
 
+//-------INSCRIÇÃO--------
+router.post("/inscricao", (req, res) => {
+    let id_empreiteira = req.query["id_empreiteira"];
+    let id_servico = req.query["id_servico"];
 
-
+    sql = `
+        INSERT INTO inscricao
+            (
+                id_empreiteira,
+                id_servico
+            )
+        values (?, ?)
+    `
+    db.run(sql, [id_empreiteira, id_servico], (err, row) => {
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        };
+        res.json({message:"foi"}); 
+    })
+});
 
 
 //exporta cadastro para a api.js
 module.exports = router;
-
