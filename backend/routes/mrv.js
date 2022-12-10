@@ -5,6 +5,9 @@ const db = require('../utils/db');
 //middleware de roteamento
 const router = express.Router();
 
+
+
+//------AVALIAÇÃO DA EMPREITEIRA PELA CONTRUTURA-----------
 router.post("/avaliacaoEmpreiteira", (req, res) => {
     let nota;
     let nota_prazo = req.body["nota_prazo"];
@@ -70,7 +73,7 @@ router.post("/avaliacaoEmpreiteira", (req, res) => {
 
 
 //encaminha para a página de lista de empreiteiras
-router.all("/", (req, res) => {
+router.all("/listaEmpreiteira", (req, res) => {
     res.render("/lista_empreiteiras");
 });
 
@@ -98,7 +101,7 @@ router.get("/lista_empreiteiras", (req, res) => {
 
 
 //encaminha para a página de lista de empreiteiras que se candidataram
-router.all("/", (req, res) => {
+router.all("/listaCandidatos", (req, res) => {
     res.render("/candidatos");
 });
 
@@ -122,6 +125,27 @@ router.get("/candidatos", (req, res) => {
             res.render("mrv_admin/candidatos", {candidatos:rows});
             }
         });
+});
+
+router.get("/perfil", (req, res) => {
+
+    let id_administrador = req.query["id_administrador"];
+    const sql = `
+        SELECT *
+        FROM administrador_mrv
+        WHERE
+            id_administrador = ?`
+
+    db.get(sql, [id_administrador], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.json({message:row});
+        //res.render("/", {obra: row});
+    });
 });
 
 module.exports = router;
