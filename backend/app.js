@@ -53,10 +53,6 @@ app.use("/cadastro", require("./routes/cadastro"));
 app.use("/login", require("./routes/login"));
 app.use("/servico", require("./routes/servico"));
 app.use("/mrv", require("./routes/mrv"));
-<<<<<<< HEAD
-=======
-// app.use("/mrvUser", require("./routes/mrvUser"));
->>>>>>> a797bfb74c511c38f04faca1ce79e8451f49b28a
 app.use("/feed", require("./routes/feed"));
 app.use("/empreiteira", require("./routes/empreiteira"));
 
