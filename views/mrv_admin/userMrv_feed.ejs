@@ -8,7 +8,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <link rel="stylesheet" href="../public/css/adm_logado.css">
         <link rel="stylesheet" href="../public/css/footer.css">
-        <script src="../../public/js/getURL.js"></script>
         <title>MRV</title>
     </head>
     <body>
@@ -70,12 +69,12 @@
                                 <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
                             </div>
                             <div id = "card_b">
-                                <a class="link" href="/servico/editarServico?id_servico=<%=servicos[i].id_servico%>">
+                                <a class="url" href="/servico/editarServico?id_servico=<%=servicos[i].id_servico%>">
                                 <button class="btn_card">
                                     <img  src="../public/images/editar.png">
                                 </button>
                                 </a>
-                                <a class="link" href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
+                                <a class="url" href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
                                 <button class="btn_card">
                                     <img  src="../public/images/rejeitado.png">
                                 </button>
@@ -99,4 +98,5 @@
     </body>
 <script src="../projeto_frontend/js/script.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../public/js/url.js"></script>
 </html>

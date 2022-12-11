@@ -7,7 +7,8 @@ const router = express.Router();
 
 
 
-//------AVALIAÇÃO DA EMPREITEIRA PELA CONTRUTURA-----------
+//------AVALIAÇÃO DA EMPREITEIRA PELA CONSTRUTORA-----------
+//forms no qual a empreiteira consegue avaliar a empreiteira dando a ele uma classificação 
 router.post("/avaliacaoEmpreiteira", (req, res) => {
     let nota;
     let nota_prazo = req.body["nota_prazo"];
@@ -70,14 +71,11 @@ router.post("/avaliacaoEmpreiteira", (req, res) => {
     });
 });
 
-
-
-//encaminha para a página de lista de empreiteiras
-router.all("/listaEmpreiteira", (req, res) => {
-    res.render("/lista_empreiteiras");
-});
-
+//------LISTA TODAS AS EMPREITEIRAS CADASTRADAS NA PLATAFORMA--------
 //Lista as empreiteiras cadastradas no site
+//Se atentar nas informações que irão aparecer
+//Ordenar por nota
+//Filtrar por cidade + estado
 router.get("/lista_empreiteiras", (req, res) => {
     const sql = `
         SELECT id_empreiteira, nome_fantasia, telefone, cnpj
@@ -95,26 +93,22 @@ router.get("/lista_empreiteiras", (req, res) => {
         });
 });
 
-
-
-
-
-
-//encaminha para a página de lista de empreiteiras que se candidataram
-router.all("/listaCandidatos", (req, res) => {
-    res.render("/candidatos");
-});
-
-//Lista as empreiteiras que se candidataram 
+//------LISTAS TODAS AS EMPREITEIRAS CADASTRADAS EM UM SERVIÇO ESPECÍFICO------
+//Se atentar nas informações que irão aparecer
+//Ordenar por nota
 router.get("/candidatos", (req, res) => {
-    const sql = `
-        SELECT empreiteira.nome_fantasia, empreiteira.telefone, inscricao.id_servico
-        FROM empreiteira 
-        LEFT JOIN inscricao 
-        ON empreiteira.id_empreiteira = inscricao.id_empreiteira  `
+    let id_servico = req.query["id_servico"];
+
+    const sql =  `
+        SELECT empreiteira.*
+        FROM inscricao
+        INNER JOIN empreiteira ON empreiteira.id_empreiteira = inscricao.id_empreiteira
+        WHERE inscricao.id_servico = ?
+    `
+    //`SELECT * FROM empreiteira, inscricao WHERE inscricao.id_servico = ? AND inscricao.id_empreiteira = empreiteira.id_empreiteira`
 
 
-        db.all(sql, (err, rows) =>{
+        db.all(sql, [id_servico], (err, rows) =>{
             if(err) {
                 console.error(err.message);
                 res.send("Erro: " + err.message);
@@ -122,11 +116,13 @@ router.get("/candidatos", (req, res) => {
             }else{
             //redireciona para o feed necessário
             console.log(rows)
-            res.render("mrv_admin/candidatos", {candidatos:rows});
+            res.json({message:rows});
+            //res.render("mrv_admin/candidatos", {candidatos:rows});
             }
         });
 });
 
+//------PERFIL MRV------
 router.get("/perfil", (req, res) => {
 
     let id_administrador = req.query["id_administrador"];

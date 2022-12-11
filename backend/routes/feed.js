@@ -4,7 +4,7 @@ const db = require('../utils/db');
 //middleware de roteamento
 const router = express.Router();
 
-
+//------FEED EMPREITEIRA--------
 router.get("/empreiteira", (req, res) => {
 
     const sql = `
@@ -22,6 +22,7 @@ router.get("/empreiteira", (req, res) => {
         });
 });
 
+//--------FEED MRV----------
 router.get("/mrv", (req, res) => {
 
     const sql = `

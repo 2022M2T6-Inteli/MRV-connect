@@ -6,14 +6,15 @@ const db = require('../utils/db');
 //middleware de roteamento
 const router = express.Router();
 
-//encaminha para a página de adicionar obras
-router.all("/", (req, res) => {
+//encaminha para a página de criar um servico
+router.get("/criarServico", (req, res) => {
     res.render("mrv_admin/criar_servico");
 });
 
-//insere um novo usuário no banco de dados
+//insere um novo servico no banco de dados
 router.post("/criarServico", (req, res) => {
     let id_administrador = req.query["id_administrador"];
+    console.log(id_administrador);
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
@@ -63,6 +64,7 @@ router.get("/editarServico", (req, res) => {
 //Atualiza o serviço e inser no banco de dados
 //apenas para o administrador
 router.post("/editarServico", (req, res) => {
+    let id_administrador = req.query["id_administrador"];
     let id_servico = req.query["id_servico"];
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
@@ -91,12 +93,13 @@ router.post("/editarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/feed/mrv?");
+        res.redirect("/feed/mrv?id_administrador="+id_administrador);
 	});
 });
 
 //deletar um serviço do feed
 router.get("/deletarServico", (req, res) => {
+    let id_administrador = req.query["id_administrador"]
     let id_servico = req.query["id_servico"];
     const sql = `
         DELETE 
@@ -111,11 +114,11 @@ router.get("/deletarServico", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         };  
-        res.redirect("/feed/mrv?")
+        res.redirect("/feed/mrv?id_administrador="+id_administrador);
     });
 })
 
-//-------INSCRIÇÃO--------
+//-------INSCRIÇÃO DO ADMINISTRADOR--------
 router.post("/inscricao", (req, res) => {
     let id_empreiteira = req.query["id_empreiteira"];
     let id_servico = req.query["id_servico"];

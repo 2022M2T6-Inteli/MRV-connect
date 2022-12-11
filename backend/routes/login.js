@@ -6,41 +6,12 @@ const db = require('../utils/db');
 const router = express.Router();
 
 //encaminha para a página de login
+//----LOGIN MRV-------
 router.get("/mrv", (req, res) => {
     res.render("login/login_mrv");
 });
 
-router.get("/empreiteira", (req, res) => {
-    res.render("login/login_empreiteira");
-});
-
-//autenticacão do login empreiteira
-router.post("/autenticacaoEmpreiteira", (req, res) => {
-    let email = req.body["email"];
-    let senha = req.body["senha"];
-
-    let sql = `
-        SELECT id_empreiteira
-        FROM empreiteira
-        WHERE 
-            senha=? AND 
-            email=?`;
-
-
-    db.get(sql, [senha, email], (err, rows) =>{
-        if(err) {
-            console.error(err.message);
-            res.send("Erro: bobao " + err.message);
-            return;
-        }else if(rows !== undefined){
-            res.redirect("../feed/empreiteira?id_empreiteira="+rows["id_empreiteira"]);
-        }else{
-            res.redirect("/login/empreiteira");
-        };
-    });
-});
-
-
+//-----AUTENTICAÇÃO MRV--------
 router.post("/autenticacaoMrv", (req, res) => {
     let email = req.body["email"];
     let senha = req.body["senha"];
@@ -67,5 +38,39 @@ router.post("/autenticacaoMrv", (req, res) => {
         };
     });
 });
+
+//-----LOGIN EMPREITEIRA-------
+router.get("/empreiteira", (req, res) => {
+    res.render("login/login_empreiteira");
+});
+
+//------AUTENTICAÇÃO EMPREITEIRA------
+router.post("/autenticacaoEmpreiteira", (req, res) => {
+    let email = req.body["email"];
+    let senha = req.body["senha"];
+
+    let sql = `
+        SELECT id_empreiteira
+        FROM empreiteira
+        WHERE 
+            senha=? AND 
+            email=?`;
+
+
+    db.get(sql, [senha, email], (err, rows) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: bobao " + err.message);
+            return;
+        }else if(rows !== undefined){
+            res.redirect("../feed/empreiteira?id_empreiteira="+rows["id_empreiteira"]);
+        }else{
+            res.redirect("/login/empreiteira");
+        };
+    });
+});
+
+
+
 //exporta a rota para poder ser requisitada no app.js
 module.exports = router;
