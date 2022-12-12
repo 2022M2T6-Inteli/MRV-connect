@@ -24,7 +24,6 @@ router.get("/perfil", (req, res) => {
         }
         console.log(row);
         res.render("empreiteira/perfil_empreiteiro",{empreiteiras: row});
-        //res.render("/", {obra: row});
     });
 });
 
@@ -45,7 +44,7 @@ router.get("/editarPerfil", (req, res) => {
             return;
         }
         console.log(row);
-        res.json({message:row});
+        res.render("empreiteira/config_empreiteiro", {message:row});
         //res.render("/", {obra: row});
     });
 });
@@ -110,7 +109,6 @@ router.get("/paginaServico", (req, res) => {
         }
         console.log(row);
         res.render("empreiteira/pagina_servicos",{servico: row});
-        //res.render("/", {obra: row});
     });
 });
 

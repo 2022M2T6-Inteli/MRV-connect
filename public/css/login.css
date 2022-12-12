@@ -296,6 +296,7 @@ h4{
   margin: 1vh 0;
 }
 
+
 /*Todos os labels para cada input. ("Nome:", "Telefone:", "Instagram:", etc.)*/
 .modal-ajuste-titulo{
   font-size: 1.6vh;
@@ -655,5 +656,7 @@ h4{
   #modal-image{
     width: 30vw;
   }
+
+ 
 
 }
