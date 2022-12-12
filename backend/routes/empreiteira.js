@@ -23,7 +23,7 @@ router.get("/perfil", (req, res) => {
             return;
         }
         console.log(row);
-        res.json({message:row});
+        res.render("empreiteira/perfil_empreiteiro",{empreiteiras: row});
         //res.render("/", {obra: row});
     });
 });

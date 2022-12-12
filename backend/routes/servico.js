@@ -26,7 +26,7 @@ router.post("/criarServico", (req, res) => {
     let numero = req.body["numero"];
     let descricao = req.body["descricao"];
 
-    const sql = "INSERT INTO servico (nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao) VALUES ('"+req.body.nome+"', '"+req.body.logradouro+"', '"+req.body.bairro+"', '"+req.body.data_abertura+"', '"+req.body.data_finadlizacao+"', '"+req.body.numero+"', '"+req.body.descricao+"')";
+    const sql = "INSERT INTO servico (servico_nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao) VALUES ('"+req.body.nome+"', '"+req.body.logradouro+"', '"+req.body.bairro+"', '"+req.body.data_abertura+"', '"+req.body.data_finadlizacao+"', '"+req.body.numero+"', '"+req.body.descricao+"')";
 
     console.log(sql);
 
