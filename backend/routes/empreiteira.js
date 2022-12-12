@@ -93,6 +93,26 @@ router.post("/editarPerfil", (req, res) => {
 	});
 });
 
+router.get("/paginaServico", (req, res) => {
+
+    let id_servico = req.query["id_servico"];
+    const sql = `
+        SELECT *
+        FROM servico
+        WHERE
+            id_servico = ?`
+
+    db.get(sql, [id_servico], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.render("empreiteira/pagina_servicos",{servico: row});
+        //res.render("/", {obra: row});
+    });
+});
 
 
 
