@@ -154,26 +154,14 @@ border-radius: 10px;
 p{
   color: #808080;
   margin-top: 2vh;
+  
 }
 h4{
  
   font-size: 18px;
 }
-.buttonEsqueceu{
-  width: 20%;
-  border: none;
-  background: transparent;
-  display: inline-block;
-  font-size: 1rem;
-  cursor: pointer;
-  text-transform: lowercase;
-  padding: 0px !important;
-  margin: 0px !important;
-  color: rgb(102, 102, 102) !important;
-}
 
 .buttonContinuar{
-
   box-sizing: border-box;
   width: 50%;
   height: 40px;
@@ -184,9 +172,6 @@ h4{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-button .buttonEsqueceu{
-  margin-right: 2vw;
-}
 
 #buttonProximo{
   margin-top: 5vh;

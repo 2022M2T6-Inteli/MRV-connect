@@ -218,6 +218,13 @@ max-width: 100%;
     flex-direction: column;
     width: 45%;
 }
+
+.tipoDeServico{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
 .divDescricao{
     display: flex;
     flex-direction: column;

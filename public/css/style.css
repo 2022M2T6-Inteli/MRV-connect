@@ -291,8 +291,8 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     transform: translateX(-20px);
     transition: transform 0.5s;
     font-size: 20px;
-
 }
+
 /* começando a mexer no carrossel das imagens, ainda não esta pronto, porém está com algumas de suas definições */
 .sectioncontainer {
     width: 50%;
@@ -354,6 +354,8 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 .slider-nav a:hover {
 	opacity: 1;
 }
+
+
 /* terminando o carrossel */
 
 .h1-obras{
