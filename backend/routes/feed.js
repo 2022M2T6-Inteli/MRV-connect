@@ -35,7 +35,6 @@ router.get("/mrv", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }else{
-            console.log(rows);
             res.render("mrv_admin/userMrv_feed", {servicos: rows});
         };
     });
