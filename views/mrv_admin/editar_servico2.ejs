@@ -35,6 +35,8 @@
 
                             <form method="post" action="/servico/editarServico">
 
+                                <input type="hidden" name="id_administrador" value="<%=id%>">
+                                <input type="hidden" name="id_servico" value="<%=obra.id_servico%>">
                                 <!--NOME-->
                                 <div class="divNome">
                                     <label id="servico_nome" for="">Nome:</label>

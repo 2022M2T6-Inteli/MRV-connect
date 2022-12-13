@@ -8,12 +8,13 @@ const router = express.Router();
 
 //encaminha para a página de criar um servico
 router.get("/criarServico", (req, res) => {
-    res.render("mrv_admin/criar_servico");
+    let id_administrador = req.query["id_administrador"];
+    res.render("mrv_admin/criar_servico", {id:id_administrador});
 });
 
 //insere um novo servico no banco de dados
 router.post("/criarServico", (req, res) => {
-    let id_administrador = req.query["id_administrador"];
+    let id_administrador = req.body["id_administrador"];
     console.log(id_administrador);
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
@@ -22,14 +23,17 @@ router.post("/criarServico", (req, res) => {
     //let estado = req.body["estado"];
     let data_abertura = req.body["data_abertura"];
     let data_finadlizacao = req.body["data_finadlizacao"];
-    //let especialidade = req.body["especialidade"];
+    let especialidade = req.body["especialidade"];
     let numero = req.body["numero"];
     let descricao = req.body["descricao"];
 
-    const sql = "INSERT INTO servico (servico_nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao) VALUES ('"+req.body.nome+"', '"+req.body.logradouro+"', '"+req.body.bairro+"', '"+req.body.data_abertura+"', '"+req.body.data_finadlizacao+"', '"+req.body.numero+"', '"+req.body.descricao+"')";
+    const sql = `
+        INSERT INTO servico 
+        (nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao) 
+        VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
 
-    db.run(sql, (err, rows) =>{
+    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao], (err, rows) =>{
         if(err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
@@ -43,6 +47,7 @@ router.post("/criarServico", (req, res) => {
 //Apenas para o administrador
 router.get("/editarServico", (req, res) => {
     let id_servico = req.query["id_servico"];
+    let id_administrador = req.query["id_administrador"];
 
     const sql = `
         SELECT *
@@ -56,15 +61,15 @@ router.get("/editarServico", (req, res) => {
                 res.send("Erro: " + err.message);
                 return;
             }
-            console.log(row);
-            res.render("mrv_admin/editar_servico2", {obra: row});
+            //console.log(row);
+            res.render("mrv_admin/editar_servico2", {obra: row, id: id_administrador});
         });
 });
 //Atualiza o serviço e inser no banco de dados
 //apenas para o administrador
 router.post("/editarServico", (req, res) => {
-    let id_administrador = req.query["id_administrador"];
-    let id_servico = req.query["id_servico"];
+    let id_administrador = req.body["id_administrador"];
+    let id_servico = req.body["id_servico"];
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
@@ -117,7 +122,7 @@ router.get("/deletarServico", (req, res) => {
     });
 })
 
-//-------INSCRIÇÃO DO ADMINISTRADOR--------
+//-------INSCRIÇÃO DA EMPREITEIRA--------
 router.post("/inscricao", (req, res) => {
     let id_empreiteira = req.query["id_empreiteira"];
     let id_servico = req.query["id_servico"];
