@@ -52,7 +52,7 @@
                     <!--div id="corpo_left_right"-->
                     <!-- <input type="hidden" name="id_empreiteira" value="" /> -->
                     
-                        <h1 id="profile_name" name="nome_fantasia" >Nome: </h1>
+                        <h1 id="profile_name" name="nome_fantasia" >Nome:<%-empreiteira.nome_fantasia%></h1>
                         <div id="contact_icons">
                             <img class="icons" src="../public/images/whatsapp.svg">
                             <img class="icons" src="../public/images/instagram.svg">
@@ -71,7 +71,7 @@
                     <hr class="lines">
                     <div id="Descrição">
                         <h1 class="corpo_titulos">Descrição:</h1>
-                        <p id="corpo_descrição">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p id="corpo_descrição"><%-empreiteira.descricao%></p>
                     </div>
                     <hr class="lines">
                     <div id="Experiências">
@@ -94,15 +94,15 @@
                                     <ul>
                                         <li>
                                             <h1 class="rec-list-titulo">Recommendation 1:</h1>
-                                            <p class="rec-list-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit magni doloribus doloremque amet. At.</p>
+                                            <p class="rec-list-text"> <%-empreiteira.descricao_prazo%></p>
                                         </li>
                                         <br><li>
                                             <h1 class="rec-list-titulo">Recommendation 2:</h1>
-                                            <p class="rec-list-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident accusamus atque, id explicabo inventore exercitationem perspiciatis commodi repudiandae molestias fugiat, asperiores sequi optio dolores quas!</p>
+                                            <p class="rec-list-text"><%-empreiteira.descricao_qualidade%></p>
                                         </li>
                                         <br><li>
                                             <h1 class="rec-list-titulo">Recommendation 3:</h1>
-                                            <p class="rec-list-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae similique suscipit perspiciatis velit doloremque neque iusto voluptatibus veritatis vero tempore?</p>
+                                            <p class="rec-list-text"><%-empreiteira.descricao_limpeza_organizacao%></p>
                                         </li>
 
                                     </ul>

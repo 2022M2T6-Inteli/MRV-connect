@@ -13,8 +13,10 @@ router.get("/perfil", (req, res) => {
     const sql = `
         SELECT *
         FROM empreiteira
+        LEFT JOIN nota
+        ON empreiteira.id_empreiteira = nota.id_empreiteira
         WHERE
-            id_empreiteira = ?`
+            empreiteira.id_empreiteira = ?`
 
     db.get(sql, [id_empreiteira], (err, row) =>{
         if(err) {
@@ -23,7 +25,7 @@ router.get("/perfil", (req, res) => {
             return;
         }
         console.log(row);
-        res.render("empreiteira/perfil_empreiteiro",{empreiteiras: row});
+        res.render("empreiteira/perfil_empreiteiro",{empreiteira: row});
     });
 });
 
@@ -122,7 +124,7 @@ router.get("/suasObras", (req, res) => {
         FROM servico
         LEFT JOIN inscricao
         ON
-            servico.id_empreiteira = inscricao.id_empreiteira = ?`
+            servico.id_servico = inscricao.id_servico = ?`
 
     db.get(sql, [id_empreiteira], (err, row) =>{
         if(err) {
