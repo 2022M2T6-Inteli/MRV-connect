@@ -113,5 +113,28 @@ router.get("/paginaServico", (req, res) => {
 });
 
 
+// Mostrar as obras em qe o empreiteiro se candidatou
+router.get("/suasObras", (req, res) => {
+
+    let id_empreiteira = req.query["id_empreiteira"];
+    const sql = `
+        SELECT *
+        FROM servico
+        LEFT JOIN inscricao
+        ON
+            servico.id_empreiteira = inscricao.id_empreiteira = ?`
+
+    db.get(sql, [id_empreiteira], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.render("empreiteira/suas_obras",{suasObras: row});
+    });
+});
+
+
 
 module.exports = router;
