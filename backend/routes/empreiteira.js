@@ -90,7 +90,7 @@ router.post("/editarPerfil", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/");
+        res.redirect("/empreiteira/perfil?id_empreiteira="+id_empreiteira);
 	});
 });
 
