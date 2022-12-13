@@ -137,6 +137,33 @@ router.get("/suasObras", (req, res) => {
     });
 });
 
+router.get('/suasObras', (req, res) => {
+    // Get the value of the idEmp parameter from the URL
+    let id_empreiteira = req.query["id_empreiteira"];
+
+    const sql = `
+        SELECT servico.*
+        FROM empreiteira
+        INNER JOIN inscricao ON empreiteira.id_empreiteira = inscricao.id_empreiteira
+        INNER JOIN servico ON inscricao.id_servico = servico.id_servico
+        WHERE empreiteira.id_empreiteira = ?
+    `;
+
+    console.log(sql);
+
+        db.all(sql, [id_empreiteira], (err, rows) =>{
+            if(err) {
+                console.error(err.message);
+                res.send("Erro: " + err.message);
+                return;
+            }else{
+            console.log(rows);
+            res.render("empreiteira/suas_obras",{suasObras:rows});
+            
+            }
+        });
+});
+
 
 
 module.exports = router;

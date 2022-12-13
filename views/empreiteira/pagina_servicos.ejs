@@ -13,31 +13,33 @@
 
   <body>
             <a href="../feed/empreiteira"><div class="modal-header" id="close-modal"><img id="arrow" src="../public/images/arrow.png"></div></a>
-            <div class="titulo-suas-obras"><h1><strong>Moro dos Ventos - Gesso</strong></h1></div>
+            <div class="titulo-suas-obras"><h1><strong><%-servico.nome%></strong></h1></div>
 
-           
-
+        
+            <form method="post">
             <div class="divinformacoes">
-                
+            
+                <input type="hidden" name="id_empreiteira" value="" />
                 <div class="div-card-obras">
                     <div class="card" style="width: 18rem;">
-                        <h2 class="titulo-card">São Paulo</h2>
+                        <h2 class="titulo-card"><%-servico.cidade%></h2>
                         <img src="../public/images/predio2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"> Região Vila Belmiro</h5>
+                            <h5 class="card-title"> <%-servico.bairro%></h5>
                             <p class="card-text">Especialidade: Pintura</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="informacoes-obra">
-                   
+                
                     <div class="borda-notificacoes1" id="periodo">
                         <h1>Período:</h1>
+                        <h3 style="margin:1vh 0 0 2vw;"><%-servico.data_abertura%> a <%-servico.data_finadlizacao%></h3>
                     </div>
 
                     <div class="borda-notificacoes2" id="descricao2">
-                        <h1>Descrição:</h1><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos libero harum dolorem dignissimos sint maiores, possimus error, sunt rem dicta nesciunt deleniti! Impedit optio neque blanditiis ullam. Quos, amet blanditiis! Possimus, quod dignissimos! Quo laboriosam quasi numquam velit, ducimus mollitia ipsa cum ex sunt tempora iusto, neque dolor voluptas? Incidunt!</p>
+                        <h1>Descrição:</h1><p><%-servico.descricao%></p>
                     </div>
                     <div>
                         <div class="borda-notificacoes3" id="requisitos">
@@ -45,16 +47,19 @@
                         </div>
 
                         <div class="borda-notificacoes4" id="endereco2">
-                            <h1>Endereco:</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos pariatur praesentium maiores!</p>
+                            <h1>Endereco:</h1><p><%-servico.logradouro%>, <%-servico.numero%></p>
                         </div>
                     </div>
                 </div>
+            
+            </div>
+            </form>
+
+            <div class="button">
+                <button id="inscreva-se" ><strong>Inscreva-se</strong></button>
             </div>
 
-            <div class="button"><button id="inscreva-se"><strong>Inscreva-se</strong></button></div>
-
-        </div>     
-    </div>
+        
 
   </body>
 
