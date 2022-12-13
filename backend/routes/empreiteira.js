@@ -13,8 +13,10 @@ router.get("/perfil", (req, res) => {
     const sql = `
         SELECT *
         FROM empreiteira
+        LEFT JOIN nota
+        ON empreiteira.id_empreiteira = nota.id_empreiteira
         WHERE
-            id_empreiteira = ?`
+            empreiteira.id_empreiteira = ?`
 
     db.get(sql, [id_empreiteira], (err, row) =>{
         if(err) {
@@ -23,8 +25,7 @@ router.get("/perfil", (req, res) => {
             return;
         }
         console.log(row);
-        res.render("empreiteira/perfil_empreiteiro",{empreiteiras: row});
-        //res.render("/", {obra: row});
+        res.render("empreiteira/perfil_empreiteiro",{empreiteira: row});
     });
 });
 
@@ -45,7 +46,7 @@ router.get("/editarPerfil", (req, res) => {
             return;
         }
         console.log(row);
-        res.json({message:row});
+        res.render("empreiteira/config_empreiteiro", {message:row});
         //res.render("/", {obra: row});
     });
 });
@@ -93,6 +94,48 @@ router.post("/editarPerfil", (req, res) => {
 	});
 });
 
+router.get("/paginaServico", (req, res) => {
+
+    let id_servico = req.query["id_servico"];
+    const sql = `
+        SELECT *
+        FROM servico
+        WHERE
+            id_servico = ?`
+
+    db.get(sql, [id_servico], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.render("empreiteira/pagina_servicos",{servico: row});
+    });
+});
+
+
+// Mostrar as obras em qe o empreiteiro se candidatou
+router.get("/suasObras", (req, res) => {
+
+    let id_empreiteira = req.query["id_empreiteira"];
+    const sql = `
+        SELECT *
+        FROM servico
+        LEFT JOIN inscricao
+        ON
+            servico.id_servico = inscricao.id_servico = ?`
+
+    db.get(sql, [id_empreiteira], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.render("empreiteira/suas_obras",{suasObras: row});
+    });
+});
 
 
 
