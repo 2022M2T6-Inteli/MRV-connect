@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,14 +9,14 @@
     <title>Servicos</title>  
 </head>
 
-  <body>
+<body>
         <a class="url" href="../feed/empreiteira"><div class="modal-header" id="close-modal"><img id="arrow" src="../public/images/arrow.png"></div></a>
         <div class="titulo-suas-obras"><h1><strong><%-servico.nome%></strong></h1></div>
 
-        <form method="post">
+        <form method="post" action="/servico/inscricao">
             <div class="divinformacoes">
             
-                <input type="hidden" name="id_empreiteira" value="empreiteira.id_empreiteira" />
+                <input type="hidden" name="id_empreiteira" value="<%=id%>" />
                 <input type="hidden" name="id_servico" value="<%=servico.id_servico%>" />
                 <div class="div-card-obras">
                     <div class="card" style="width: 18rem;">

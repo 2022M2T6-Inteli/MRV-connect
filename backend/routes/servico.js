@@ -141,7 +141,7 @@ router.post("/inscricao", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         };
-        res.redirect("/feed/mrv?id_administrador="+id_administrador);
+        res.redirect("/feed/empreiteira?id_empreiteira="+id_empreiteira);
     })
 });
 
