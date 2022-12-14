@@ -13,7 +13,7 @@
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../feed/empreiteira"><img class="logo" src="../public/images/mrvlogo.png" ></a>
+            <a class="navbar-brand url" href="../feed/empreiteira"><img class="logo" src="../public/images/mrvlogo.png" ></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,7 +21,7 @@
                 <div id="nomesnavbar"class="nomesnavbar">            
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item dropdown">
-                            <a class="nav-link " href="../feed/empreiteira" role="button"  >
+                            <a class="nav-link url" href="../feed/empreiteira" role="button"  >
                                 <img class="voltar" src="../public/images/setaVoltar.svg">
                             </a>
                         </li>
@@ -31,64 +31,67 @@
         </div>
     </nav>
     <br>
-    <h5 class="modal-title">Editar Perfil</h5>       
-    <div class="modal-body">
-        <div id="modal-body-left">
-            <img id="modal-image" src="https://www.nailseatowncouncil.gov.uk/wp-content/uploads/blank-profile-picture-973460_1280.jpg">
-            <p id="change-photo">Alterar foto de perfil...</p>
-            
+    <h5 class="modal-title">Editar Perfil</h5>   
+    <form method="post" action="/empreiteira/editarPerfil"></form>    
+        <div class="modal-body">
+            <div id="modal-body-left">
+                <img id="modal-image" src="https://www.nailseatowncouncil.gov.uk/wp-content/uploads/blank-profile-picture-973460_1280.jpg">
+                <p id="change-photo">Alterar foto de perfil...</p>
+                
+            </div>
+                    <input type="hidden" name="id_administrador" value="">
+                    <div id="modal-body-right">
+                        <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">Nome: </h3>
+                            <input type="text" class="modal-ajuste-texto" name="nome" placeholder=" Mauricio Gessos">
+                        </div>
+                        <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">Telefone:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="telefone" placeholder=" (12)34567-8910">
+                        </div>
+                        <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">Logradouro:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="logradouro" placeholder=" @mauriciogessos">
+                        </div>
+                        <div class="modal-ajuste">
+                            <div>
+                                <h3 class="modal-ajuste-titulo">N°:</h3>
+                                <input type="text" class="modal-ajuste-texto" name="numero" placeholder=" @mauriciogessos">
+                            </div>
+                            <div>
+                                <h3 class="modal-ajuste-titulo">Bairro:</h3>
+                                <input type="text" class="modal-ajuste-texto" name="bairro" placeholder=" @mauriciogessos">
+                            </div>
+                        </div>
+                        <div class="modal-ajuste">
+                            <div>
+                                <h3 class="modal-ajuste-titulo">E-mail:</h3>
+                                <input type="text" class="modal-ajuste-texto" name="email" placeholder=" mauriciogessos@gmail.com">
+                            </div>
+                            <div>
+                                <h3 class="modal-ajuste-titulo">Senha:</h3>
+                                <input type="text" class="modal-ajuste-texto" name="senha" placeholder=" mauriciogessos@gmail.com">
+                            </div>
+                        </div>
+                        <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">Quantidade de funcionarios:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="qtd_funcionarios" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+                        </div>
+                        <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">Descrição:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="descricao" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+                    </div>
+            </div>
         </div>
-        <input type="hidden" name="id_administrador" value="">
-        <div id="modal-body-right">
-            <div class="modal-ajuste">
-                <h3 class="modal-ajuste-titulo">Nome: </h3>
-                <input type="text" class="modal-ajuste-texto" placeholder=" Mauricio Gessos">
-            </div>
-            <div class="modal-ajuste">
-                <h3 class="modal-ajuste-titulo">Telefone:</h3>
-                <input type="text" class="modal-ajuste-texto" placeholder=" (12)34567-8910">
-            </div>
-            <div class="modal-ajuste">
-                <h3 class="modal-ajuste-titulo">Logradouro:</h3>
-                <input type="text" class="modal-ajuste-texto" placeholder=" @mauriciogessos">
-            </div>
-            <div class="modal-ajuste">
-                <div>
-                    <h3 class="modal-ajuste-titulo">N°:</h3>
-                    <input type="text" class="modal-ajuste-texto" placeholder=" @mauriciogessos">
-                </div>
-                <div>
-                    <h3 class="modal-ajuste-titulo">Bairro:</h3>
-                    <input type="text" class="modal-ajuste-texto" placeholder=" @mauriciogessos">
-                </div>
-            </div>
-            <div class="modal-ajuste">
-                <div>
-                    <h3 class="modal-ajuste-titulo">E-mail:</h3>
-                    <input type="text" class="modal-ajuste-texto" placeholder=" mauriciogessos@gmail.com">
-                </div>
-                <div>
-                    <h3 class="modal-ajuste-titulo">Senha:</h3>
-                    <input type="text" class="modal-ajuste-texto" placeholder=" mauriciogessos@gmail.com">
-                </div>
-            </div>
-            <div class="modal-ajuste">
-                <h3 class="modal-ajuste-titulo">Quantidade de funcionarios:</h3>
-                <input type="text" class="modal-ajuste-texto" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit.">
-            </div>
-            <div class="modal-ajuste">
-                <h3 class="modal-ajuste-titulo">Descrição:</h3>
-                <input type="text" class="modal-ajuste-texto" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit.">
-            </div>
-        </div>
-    </div>
 
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" background-color="green">Salvar</button>
-    </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" background-color="green">Salvar</button>
+        </div>
+    </form>
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="../../public/js/url.js"></script>
 <script src="script.js"></script>
 
 </html>

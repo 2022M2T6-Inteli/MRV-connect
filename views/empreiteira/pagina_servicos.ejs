@@ -10,13 +10,14 @@
 </head>
 
   <body>
-            <a href="../feed/empreiteira"><div class="modal-header" id="close-modal"><img id="arrow" src="../public/images/arrow.png"></div></a>
-            <div class="titulo-suas-obras"><h1><strong><%-servico.nome%></strong></h1></div>
+        <a class="url" href="../feed/empreiteira"><div class="modal-header" id="close-modal"><img id="arrow" src="../public/images/arrow.png"></div></a>
+        <div class="titulo-suas-obras"><h1><strong><%-servico.nome%></strong></h1></div>
 
-            <form method="post">
+        <form method="post">
             <div class="divinformacoes">
             
-                <input type="hidden" name="id_empreiteira" value="" />
+                <input type="hidden" name="id_empreiteira" value="empreiteira.id_empreiteira" />
+                <input type="hidden" name="id_servico" value="<%=servico.id_servico%>" />
                 <div class="div-card-obras">
                     <div class="card" style="width: 18rem;">
                         <h2 class="titulo-card"><%-servico.cidade%></h2>
@@ -50,10 +51,13 @@
                 </div>
             
             </div>
-            </form>
-
+            
             <div class="button">
                 <button id="inscreva-se" ><strong>Inscreva-se</strong></button>
             </div>
-  </body>
+
+        </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="../../public/js/url.js"></script>
 </html>

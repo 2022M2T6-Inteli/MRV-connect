@@ -52,7 +52,7 @@ router.get("/editarPerfil", (req, res) => {
 });
 
 router.post("/editarPerfil", (req, res) => {
-    let id_empreiteira = req.query["id_empreiteira"];
+    let id_empreiteira = req.body["id_empreiteira"];
     let id_cidade = req.body["id_cidade"];
     let cnpj = req.body["cnpj"];
     let data_de_abertura = req.body["data_de_abertura"];
@@ -97,6 +97,7 @@ router.post("/editarPerfil", (req, res) => {
 router.get("/paginaServico", (req, res) => {
 
     let id_servico = req.query["id_servico"];
+    let id_empreiteira = req.query["id_empreiteira"]
     const sql = `
         SELECT *
         FROM servico
@@ -110,10 +111,9 @@ router.get("/paginaServico", (req, res) => {
             return;
         }
         console.log(row);
-        res.render("empreiteira/pagina_servicos",{servico: row});
+        res.render("empreiteira/pagina_servicos",{servico: row, empreiteira: id_empreiteira});
     });
 });
-
 
 // Mostrar as obras em qe o empreiteiro se candidatou
 // router.get("/suasObras", (req, res) => {

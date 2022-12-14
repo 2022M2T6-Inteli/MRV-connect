@@ -124,8 +124,8 @@ router.get("/deletarServico", (req, res) => {
 
 //-------INSCRIÇÃO DA EMPREITEIRA--------
 router.post("/inscricao", (req, res) => {
-    let id_empreiteira = req.query["id_empreiteira"];
-    let id_servico = req.query["id_servico"];
+    let id_empreiteira = req.body["id_empreiteira"];
+    let id_servico = req.body["id_servico"];
 
     sql = `
         INSERT INTO inscricao
@@ -141,7 +141,7 @@ router.post("/inscricao", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         };
-        res.json({message:"foi"}); 
+        res.redirect("/feed/mrv?id_administrador="+id_administrador);
     })
 });
 
