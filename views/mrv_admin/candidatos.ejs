@@ -19,7 +19,7 @@
         <div class="body-content">
             <h1>LISTA DE CANDIDATOS</h1>
             <br>
-            <h2>São Paulo - Vila Belmiro</h2>
+            <h2><%-candidatos.bairro%></h2>
         </div>
     </div>
     <div class="conteudo">
@@ -29,16 +29,17 @@
             <tr>
                 <th>Nome empreiteira</th>
                 <th>Telefone</th>
-                <th>ID do serviço</th>
+                <th>E-mail</th>
             </tr>
 
             <% for (let i = 0; i < candidatos.length; i++) { %>
 
                 <tr>
-                    <td><%-candidatos[i].nome_fantasia%></td>
+                    <td>
+                        <a href="/empreiteira/perfil?id_empreiteira=<%=candidatos[i].id_empreiteira%>"><button><%-candidatos[i].nome_fantasia%></button></a></td>
                     <td><%-candidatos[i].telefone%></td>
-                    <td><%-candidatos[i].id_servico%></td>
-                    <td><img src="../public/images/aceito.png"></td>
+                    <td><%-candidatos[i].email%></td>
+                    <!-- <td><img src="../public/images/aceito.png"></td> -->
                 </tr>
 
             <% } %>

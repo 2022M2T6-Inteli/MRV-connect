@@ -107,7 +107,6 @@ router.get("/candidatos", (req, res) => {
     `
     //`SELECT * FROM empreiteira, inscricao WHERE inscricao.id_servico = ? AND inscricao.id_empreiteira = empreiteira.id_empreiteira`
 
-
         db.all(sql, [id_servico], (err, rows) =>{
             if(err) {
                 console.error(err.message);
@@ -116,7 +115,7 @@ router.get("/candidatos", (req, res) => {
             }else{
             //redireciona para o feed necessário
             console.log(rows)
-            res.json({message:rows});
+            res.render("mrv_admin/candidatos",{candidatos:rows});
             //res.render("mrv_admin/candidatos", {candidatos:rows});
             }
         });
