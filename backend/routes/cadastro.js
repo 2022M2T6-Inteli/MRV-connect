@@ -24,7 +24,7 @@ router.post("/inserirCadastro", (req, res) => {
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/login");
+        res.redirect("/login/empreiteira");
     });
 });
 
