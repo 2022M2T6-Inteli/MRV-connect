@@ -97,7 +97,8 @@ router.post("/editarPerfil", (req, res) => {
 router.get("/paginaServico", (req, res) => {
 
     let id_servico = req.query["id_servico"];
-    let id_empreiteira = req.query["id_empreiteira"]
+    let id_empreiteira = req.query["id_empreiteira"];
+    console.log("id EMPREITEIRA ::::: " + id_empreiteira);
     const sql = `
         SELECT *
         FROM servico
@@ -111,7 +112,7 @@ router.get("/paginaServico", (req, res) => {
             return;
         }
         console.log(row);
-        res.render("empreiteira/pagina_servicos",{servico: row, empreiteira: id_empreiteira});
+        res.render("empreiteira/pagina_servicos",{servico: row, id: id_empreiteira});
     });
 });
 
