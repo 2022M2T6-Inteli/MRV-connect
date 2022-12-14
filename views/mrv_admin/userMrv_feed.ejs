@@ -67,18 +67,23 @@
                             <div class="card_date">
                                 <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
                                 <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
+                                <p class="card-text">Serviço: <%=servicos[i].tipo_servico%></p>
                             </div>
                             <div id = "card_b">
-                                <a class="url" href="/servico/editarServico?id_servico=<%=servicos[i].id_servico%>">
-                                <button class="btn_card">
-                                    <img  src="../public/images/editar.png">
-                                </button>
-                                </a>
-                                <a class="url" href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
-                                <button class="btn_card">
-                                    <img  src="../public/images/rejeitado.png">
-                                </button>
-                                </a>
+                                <div id="editar">
+                                    <a class="url" href="/servico/editarServico?id_servico=<%=servicos[i].id_servico%>">
+                                    <button class="btn_card">
+                                        <img  id="editar" src="../public/images/editar.png">
+                                    </button>
+                                    </a>
+                                </div>
+                                <div id="rejeitado">
+                                    <a class="url" href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
+                                    <button class="btn_card">
+                                        <img id="rejeitado" src="../public/images/rejeitado.png">
+                                    </button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

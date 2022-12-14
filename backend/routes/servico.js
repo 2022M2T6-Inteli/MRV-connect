@@ -123,57 +123,27 @@ router.get("/deletarServico", (req, res) => {
 })
 
 //-------INSCRIÇÃO DA EMPREITEIRA--------
-// router.post("/inscricao", (req, res) => {
-//     let id_empreiteira = req.query["id_empreiteira"];
-//     let id_servico = req.query["id_servico"];
-
-//     sql = `
-//         INSERT INTO inscricao
-//             (
-//                 id_empreiteira,
-//                 id_servico
-//             )
-//         values (?, ?)
-//     `
-//     db.run(sql, [id_empreiteira, id_servico], (err, row) => {
-//         if(err) {
-//             console.error(err.message);
-//             res.send("Erro: " + err.message);
-//             return;
-//         };
-//         res.json({message:"foi"}); 
-//     })
-// });
-
-router.get('/empreiteiraa', (req, res) => {
-    // Get the value of the idEmp parameter from the URL
+router.post("/inscricao", (req, res) => {
     let id_empreiteira = req.query["id_empreiteira"];
+    let id_servico = req.query["id_servico"];
 
-    const sql = `
-        SELECT servico.*
-        FROM empreiteira
-        INNER JOIN inscricao ON empreiteira.id_empreiteira = inscricao.id_empreiteira
-        INNER JOIN servico ON inscricao.id_servico = servico.id_servico
-        WHERE empreiteira.id_empreiteira = ?
-    `;
-
-    console.log(sql);
-
-        db.all(sql, [id_empreiteira], (err, rows) =>{
-            if(err) {
-                console.error(err.message);
-                res.send("Erro: " + err.message);
-                return;
-            }else{
-            console.log(rows);
-            res.render("empreiteira/suas_obras",{message:rows});
-            
-            }
-        });
+    sql = `
+        INSERT INTO inscricao
+            (
+                id_empreiteira,
+                id_servico
+            )
+        values (?, ?)
+    `
+    db.run(sql, [id_empreiteira, id_servico], (err, row) => {
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        };
+        res.json({message:"foi"}); 
+    })
 });
-
-
-
 
 
 //exporta cadastro para a api.js
