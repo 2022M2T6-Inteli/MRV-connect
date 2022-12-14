@@ -46,7 +46,7 @@ router.get("/editarPerfil", (req, res) => {
             return;
         }
         console.log(row);
-        res.render("empreiteira/config_empreiteiro", {message:row});
+        res.render("empreiteira/config_empreiteiro", {empreiteiras:row, id:id_empreiteira});
         //res.render("/", {obra: row});
     });
 });
@@ -54,7 +54,7 @@ router.get("/editarPerfil", (req, res) => {
 router.post("/editarPerfil", (req, res) => {
     let id_empreiteira = req.body["id_empreiteira"];
     let id_cidade = req.body["id_cidade"];
-    let cnpj = req.body["cnpj"];
+    // let cnpj = req.body["cnpj"];
     let data_de_abertura = req.body["data_de_abertura"];
     let razao_social = req.body["razao_social"];
     let nome_fantasia = req.body["nome_fantasia"];
@@ -66,14 +66,10 @@ router.post("/editarPerfil", (req, res) => {
     let email = req.body["email"];
     let senha = req.body["senha"];
     let descricao = req.body["descricao"];
+    console.log("nome:" + nome_fantasia);
     //const sql = "UPDATE servico SET nome='" + req.body.nome + "', logradouro='"+req.body.logradouro+"', bairro='"+req.body.bairro+"', data_abertura='"+req.body.data_abertura+"', data_finadlizacao='"+req.body.data_finadlizacao+"', numero='"+req.body.numero+"', descricao='"+req.body.descricao+"' WHERE id_servico='"+req.body.id_servico+"'";
     const sql = `UPDATE empreiteira
                     SET
-                        id_empreiteira=?
-                        id_cidade=?,
-                        cnpj=?,
-                        data_de_abertura=?,
-                        razao_social=?,
                         nome_fantasia=?,
                         qtd_funcionario=?,
                         logradouro=?,
@@ -82,9 +78,9 @@ router.post("/editarPerfil", (req, res) => {
                         telefone=?,
                         email=?,
                         senha=?,
-                        descricao=?,
+                        descricao=?
                     WHERE id_empreiteira=?`;
-    db.run(sql, [id_empreiteira, id_cidade, cnpj, data_de_abertura, razao_social, nome_fantasia, qtd_funcionario, logradouro, numero, bairro, telefone, email, senha, descricao], (err, rows) => {
+    db.run(sql, [nome_fantasia, qtd_funcionario, logradouro, numero, bairro, telefone, email, senha, descricao, id_empreiteira], (err, rows) => {
 		if (err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
