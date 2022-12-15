@@ -58,7 +58,6 @@
         <!-- <div class="feed_body"> -->
             <div class="div-card">
                 <% for (let i = 0; i < servicos.length; i++) { %>
-                    <a class="url" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"> cadastrados</a>
                     <div class="card" style="width: 18rem;">
                         <h2 class="titulo-card"> <%=servicos[i].nome%> </h2>
                         <img src="../public/images/predio2.jpg" class="card-img-top" alt="..." style="border-radius:0%;">
@@ -87,6 +86,7 @@
                                 </div>
                             </div>
                         </div>
+                        <a class="url" id="cadastrados" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"> Empreiteiras cadastradas</a>
                     </div>
                 <% } %>
             </div>
