@@ -82,5 +82,5 @@ app.use((err, req, res, next) => {
 
 //iniciar servidor
 const server = app.listen(parseInt(process.env.PORT), process.env.IP, () => {
-    console.log("Servidor executando na porta " + server.address().port);
+    console.log("Servidor executando na porta http://localhost:" + server.address().port);
 });
