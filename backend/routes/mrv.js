@@ -143,4 +143,26 @@ router.get("/perfil", (req, res) => {
     });
 });
 
+router.get("/perfilEmpreiteira", (req, res) => {
+
+    let id_empreiteira = req.query["id_empreiteira"];
+    const sql = `
+        SELECT *
+        FROM empreiteira
+        LEFT JOIN nota
+        ON empreiteira.id_empreiteira = nota.id_empreiteira
+        WHERE
+            empreiteira.id_empreiteira = ?`
+
+    db.get(sql, [id_empreiteira], (err, row) =>{
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        console.log(row);
+        res.render("mrv_admin/perfil_empreiteiroMrv",{empreiteira: row});
+    });
+});
+
 module.exports = router;
