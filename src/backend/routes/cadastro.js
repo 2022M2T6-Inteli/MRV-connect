@@ -7,7 +7,8 @@ const router = express.Router();
 router.all("/", (req, res) => {
     res.render("login/cadastro");
 });
-//insere uma nova empreiteira no banco de dados
+//insere/insere uma nova empreiteira no banco de dados
+//redireciona para a página de login para logar
 router.post("/inserirCadastro", (req, res) => {
     let nomeEmpresa = req.body["nomeEmpresa"];
     let cnpjEmpresa = req.body["cnpjEmpresa"];
@@ -17,16 +18,13 @@ router.post("/inserirCadastro", (req, res) => {
 
     const sql = "INSERT INTO empreiteira (nome_fantasia, cnpj, telefone, email, senha) VALUES (?, ?, ?, ?, ?)";
 
-    console.log(sql);
-//TESTE
-//Mostra todas as informações do usuário
     db.run(sql, [nomeEmpresa, cnpjEmpresa, contato, email, senha], (err, rows) =>{
         if(err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
             return;
         }
-        res.redirect("/login");
+        res.redirect("/login/empreiteira");
     });
 });
 

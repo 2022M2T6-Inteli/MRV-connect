@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="/public/css/login.css">
         
         
-        <title>Login</title>
+        <title>Login Empreiteiro</title>
     </head>
-    <body>
+    <body>  
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img class="logo" src="../public/images/mrvlogo.png" ></a>
+                <a class="navbar-brand" href="../"><img class="logo" src="../public/images/mrvlogo.png" ></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -22,7 +22,7 @@
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link " href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link " href="../" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img class="voltar" src="../public/images/setaVoltar.svg">
                             </a>
                         </li>
@@ -40,20 +40,27 @@
                 <div class="login">
                     <div class="divlogo" ><img class="logo log" src="../public/images/mrvlogo.png"></div>
                     <div class="input-out">
-                        <form method="post" action="/login/autenticacao">
+                        <form method="post" action="/login/autenticacaoEmpreiteira">
                             <div class="inputs">
-                                <label id="email" for="">E-MAIL</label>
+                                <div class="senhaesqueceu">
+                                    <label for="">E-MAIL</label>
+                                </div>
                                 <input type="email" name="email" placeholder="    mauriciogesso@gmail.com" /><br>
                                 <div class="senhaesqueceu">
                                     <label for="">SENHA</label>
-                                    <button class="buttonEsqueceu">Esqueceu?</button>
                                 </div>
                                 <input type="password" name="senha" placeholder="    **********" />
                                 <p id="cadastro">Não tem cadastro? <a class="url" href="/cadastro">Cadastre-se</p></a>
                                     <button type="submit" id="buttonContinuar" class="buttonContinuar">Continuar</button>
+                                    <br>
+                                    <div class="cadastroMrv">
+                                        <p>Usuario MRV? <a class="url" href="/login/mrv">Clique aqui</p></a>
+                                    </div>
                             </div>
+                            
                         </form>
-
+                        
+                        
                     </div>
                 </div>
             </div>

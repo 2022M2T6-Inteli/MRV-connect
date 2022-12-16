@@ -16,7 +16,9 @@ body {
     width: 100%;
     height: 100%;
     background-color:rgb(252,252,252);
-    font-family: 'verdanaFont' !important;    
+    font-family: 'verdanaFont' !important;
+
+    
 }
 
 .nomesnavbar li{
@@ -61,8 +63,11 @@ body {
 
 /* NAVBAR ACABOU AQUI */
 
-
-/* Imagem lateral */
+/* .divtotal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 #divimagem{
   width:45vw;
   height:90vh;
@@ -73,20 +78,20 @@ body {
   z-index: 6;
   overflow: hidden;
 }
-
 #divimagem > img {
   width: 100%;
   height: 100%;
 }
 
+
 .divtotal{
   width: 100vw;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Progresso no cadastro */
 .timeline{
     margin-left: 5%;
     width: 90%;
@@ -96,15 +101,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .circulo{
 background: #006B3F;
 border-radius: 50%;
 width: 5vw;
 height: 10vh;
 margin-left: 4vw;
-}
 
+}
 .dois{
     margin-left: 4vw;
     background-color: #D9D9D9;
@@ -119,15 +123,14 @@ margin-left: 4vw;
     align-items: center;
 }
 
-/* Estrutura da caixa de cadastro */
 .divlogin{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 55vw;
   height: 60vh;
+  
 }
-
 .login{
   height: 90%;
   margin: 0 auto;
@@ -155,7 +158,9 @@ margin-left: 4vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   height: 50%;
+  /* width: 100%; */
 }
 
 .cadastro{
@@ -177,17 +182,18 @@ background: #FFFFFF;
 border: 1px solid #000000;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
+
 }
+
 
 p{
   color: #808080;
   margin-top: 2vh;
 }
-
 h4{
+ 
   font-size: 18px;
 }
-
 .buttonEsqueceu{
   width: 20%;
   border: none;
@@ -202,6 +208,7 @@ h4{
 }
 
 .buttonContinuar{
+
   box-sizing: border-box;
   width: 80%;
   height: 20%;
@@ -211,7 +218,6 @@ h4{
   color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 button .buttonEsqueceu{
   margin-right: 2vw;
 }
@@ -229,6 +235,7 @@ button .buttonEsqueceu{
   width: 80%;
   display: flex;
   justify-content: space-between;
+  
 }
 
 /* Alinha placeholder */

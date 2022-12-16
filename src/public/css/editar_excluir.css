@@ -13,23 +13,23 @@
 /* dando orientações para o corpo da pagina, para qual altura ele deve obedecer e não colocando em pixel 
 para poder manter a proporção em outras telas */
 body {
+    
     height: 100%;
     background-color:rgb(252,252,252);
     font-family: 'verdanaFont' !important;
+    
 }
 
-/* Edição nav bar */
+
 .nomesnavbar{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20vw;
 }
-
 .nomesnavbar li{
     margin-left: 5vw;
 }
-
 .logo{
     height: 5vh;
 }
@@ -67,16 +67,15 @@ body {
     line-height: 1.5;
     padding: 1rem 1rem;
 }
-
 .h5-filtro{
     font-size: 15px;
     color:white;
 }
 
-/* Barra de pesquisa */
 .sticky-top{
     z-index: 21;
 }
+
 
 .dropdown-menu{
     z-index: 22;
@@ -108,14 +107,12 @@ body {
 
 /* terminando o carrossel */
 
-/* Estrutura do corpo da pagina */
 .h1-obras{
     display: flex;
     justify-content: center;
     margin-top: 5vh;
 }
 
-/* Estrutura dos cards */
 .div-card{
     margin-left: 16% ;
     margin-right: 10%;
@@ -123,6 +120,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 
 .card{
@@ -130,6 +128,7 @@ body {
     margin-right: 7%;
     margin-top: 7%;
 }
+
 
 #seemorebutton{
     padding: 10px;
@@ -241,6 +240,7 @@ footer .rodado {
         line-height: 1.5;
         padding: 1rem 1rem;
     }
+
 
     .btn-primary {
         width: 15vw;
@@ -356,6 +356,7 @@ footer .rodado {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
   }
   
   .card{

@@ -17,27 +17,22 @@ body {
     height: 100%;
     background-color:rgb(252,252,252);
     font-family: 'verdanaFont' !important;
-
-    
 }
 
-/* Estrutura nav bar */
+
 .nomesnavbar{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 36vw;
 }
-
 .nomesnavbar li{
     margin-left: 4vw;
 }
-
 .logo{
     margin-left: 2vw;
     height: 5vh;
 }
-
 .voltar{
     height: 3vh;
     margin-right: 2vw;
@@ -47,8 +42,8 @@ body {
 #navbarScroll{
     display: flex;
     justify-content:right !important;
+    
 }
-
 .navbar-collapse{
     flex-grow: 0;
 }
@@ -73,38 +68,43 @@ body {
 
 /* NAVBAR ACABOU AQUI */
 
-/* Imagem a esquerda */
+/* .divtotal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 #divimagem{
   width:45vw;
-  height:90vh;
+  height: 90vh;
   float:left;
   background-color:#ff1;  
   display: initial;
+  
   z-index: 6;
   overflow: hidden;
 }
-
 #divimagem > img {
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 
+
 .divtotal{
   width: 100vw;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Caixa com as informações de cadastro */
 .divlogin{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 55vw;
   height: 90vh;
+  
 }
-
 .login{
   height: 70%;
   margin: 0 auto;
@@ -146,27 +146,17 @@ background: #FFFFFF;
 border: 1px solid #000000;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
+
 }
 
 p{
   color: #808080;
   margin-top: 2vh;
+  
 }
 h4{
+ 
   font-size: 18px;
-}
-
-.buttonEsqueceu{
-  width: 20%;
-  border: none;
-  background: transparent;
-  display: inline-block;
-  font-size: 1rem;
-  cursor: pointer;
-  text-transform: lowercase;
-  padding: 0px !important;
-  margin: 0px !important;
-  color: rgb(102, 102, 102) !important;
 }
 
 .buttonContinuar{
@@ -180,9 +170,6 @@ h4{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-button .buttonEsqueceu{
-  margin-right: 2vw;
-}
 
 #buttonProximo{
   margin-top: 5vh;
@@ -194,9 +181,19 @@ button .buttonEsqueceu{
   justify-content: space-between;
   
 }
+
+.email{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
 #nomeEmpresa{
   margin-top: 10vh;
 }
+
+
 
 #myModal{
     width: 100vw;
@@ -222,7 +219,7 @@ button .buttonEsqueceu{
   
 /*O titulo do modal, onde está escrito Editar Perfil*/
 .modal-title{
-  height:5vh;
+  height:4vh;
   font-size: 4vh;
   font-weight: bolder;
   flex: 1;
@@ -231,6 +228,7 @@ button .buttonEsqueceu{
   justify-content: center;
   text-align: center;
   align-items: center;
+  /* margin: 0 0 2vh 0; */
 }
 
 /*botão "x" que fica no header*/
@@ -255,42 +253,76 @@ button .buttonEsqueceu{
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding:1vh 0 0 0;
+  height: 10vh;
+  margin: 0;
+  display: flex;
+}
+
+#footL{
+  width: 34vw;
+}
+
+#footR{
+  padding: 10%;
+  width: 66vw;
+}
+
+#buttonSave{
+  padding: 10%;
+  height: 4vh;
+  width: 10vw;
+  background-color: orange;
+  border-color: #000000;
 }
 
 /*Area principal do modal. Fica entre o header e o footer*/
 .modal-body{
   display:flex;
+  height: 75vh;
+  margin: 5vh 0 0 0;
 }
 
 /*Area da esquerda do body. Contém a foto de perfil e o botão de mudar a foto*/
 #modal-body-left{
-  width:21vw;
+  width: 31vw;
+  margin: 0 1.5vw;
   height:auto;
   text-align: center;
 }
 
 /*A foto de perfil*/
 #modal-image{
-  width: 11vw;
+  width: 22vw;
   height: auto;
   border-radius: 100%;
-  margin: 0;
+  margin: 20vh 0 0 0;
 }
 
 /*Botão de mudar a foto de perfil (Por enquanto é um texto normal, e não um button*/
 #change-photo{
-  margin: 2vh 0 0 0;
+  margin: 2vh 0 30vh 0;
   color: orange;
-  font-size:80%;
+  height: 3vh;
+  font-size:120%;
   font-weight: 150;
 }
 
 /*Area da direita do body. Contém todo o resto*/
 #modal-body-right{
-  width: 49vw;
   height: auto;
   text-align: justify;
+}
+
+#right{
+  display: flex;
+}
+
+#mbrl{
+  width: 33vw;
+}
+
+#mbrr{
+  width: 33vw;
 }
 
 /*Titulo do lado direito que diz "Dados Pessoais"*/
@@ -301,26 +333,44 @@ button .buttonEsqueceu{
 
 /*Area onde fica tudo de input e seus labels. Por exemplo: (Nome: [input de Nome])*/
 .modal-ajuste{
-  display:flex;
   margin: 1vh 0;
 }
+
 
 /*Todos os labels para cada input. ("Nome:", "Telefone:", "Instagram:", etc.)*/
 .modal-ajuste-titulo{
   font-size: 1.6vh;
-  width: 10vw;
-  text-align: right;
+  width: 15vw;
+  text-align: left;
   font-weight: 550;
-  margin: 1% 0 0 0;
+  margin: 2% 0 0 5%;
+}
+
+.modal-ajuste-titulo-desc{
+  font-size: 1.6vh;
+  width: 15vw;
+  text-align: left;
+  font-weight: 550;
+  margin: 2% 0 0 3%;
 }
 
 /*Todas as caixas de input*/
 .modal-ajuste-texto{
   font-size: 2vh;
-  margin: 0 0 0 1vw;
-  width: 39vw;
+  margin: 0 1.5vw;
+  width: 30vw;
+  height: 7vh;
   text-align: left;
 }
+
+.modal-ajuste-texto-desc{
+  font-size: 2vh;
+  margin: 0 0 0 1.5vw;
+  width: 63vw;
+  height: 14vh;
+  text-align: left;
+}
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 /*AQUI ACABARAM OS CSS DAS COISAS DENTRO DO MODAL*/
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -428,9 +478,10 @@ button .buttonEsqueceu{
 #contact_icons{
   height:4vh;
   width:11.3vw;
-  margin: 0 11.85vw;
+  margin: 0 auto;
   text-align: center;
   display:flex;
+  justify-content: space-between;
 }
 
 /*Ícone da estrelinha na avaliação*/
@@ -468,14 +519,26 @@ button .buttonEsqueceu{
 .corpo_titulos{
   font-size: 4vh;
   font-weight: bolder;
-  margin: 3vh 0 0 3vw;
+  margin: 3vh 0 0 5vw;
+  text-align: left;
+}
+
+.info{
+  width: 18vw;
+  text-align: left;
+  margin: 0 0 0 5vw;
+}
+
+.informacoesGerais{
+  display: flex;
+  /* margin: 0 10vw 0 5vw; */
 }
 
 /*A descrição em sí*/
 #corpo_descrição{
   height: auto;
-  font-size: 2vh;
-  margin: 0 9vw 2vh 3vw;
+  font-size: 3vh;
+  margin: 0 9vw 2vh 5vw;
   text-align: justify;
 }
 
@@ -503,7 +566,7 @@ button .buttonEsqueceu{
 }
 
 /*Area das recomendações que contém o titulo "Recomendações" e a lista das recomendações*/
-#Recomendações{
+.Recomendações{
   height: 21vh;
   margin: 0 9vw 0 0;
 }
@@ -523,7 +586,7 @@ button .buttonEsqueceu{
 
 /*Os titulos de cada recomendação. Por enquanto estão como "Recommendation 1:", "Recommendation 2:", etc.*/
 .rec-list-titulo{
-  font-size: 2vh;
+  font-size: 2.5vh;
   font-weight: bold;
   line-height: 3vh;
   margin:0;
@@ -532,7 +595,7 @@ button .buttonEsqueceu{
 /*O texto escrito de cada recomendação*/
 .rec-list-text{
   margin:0;
-  font-size: 2vh;
+  font-size: 3vh;
   line-height: 3vh;
 }
 
@@ -543,7 +606,9 @@ button .buttonEsqueceu{
 }
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
+  #right hr:first-of-type{display:block;}
+
   #corpo_right hr:first-of-type{display:block;}
 
   #bottom{
@@ -609,6 +674,7 @@ button .buttonEsqueceu{
     width:22vw;
     margin: 2vh 0 0 39vw;
     display:flex;
+    justify-content: space-between;
   }
   #profile_rating{
     width:4.5vw;
@@ -622,8 +688,8 @@ button .buttonEsqueceu{
   .modal-content {
     margin: 0;
     padding:15px;
-    width: 100vw; /* Could be more or less, depending on screen size */
-    height: 100vh;
+    width: 100vw; Could be more or less, depending on screen size */
+    /* height: 100vh;
   }
   #modal-body-right{
     width: 90vw;
@@ -665,4 +731,7 @@ button .buttonEsqueceu{
     width: 30vw;
   }
 
-}
+ 
+
+} */
+

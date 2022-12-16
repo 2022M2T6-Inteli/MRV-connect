@@ -11,28 +11,18 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand url" href="../feed/empreiteira"><img class="logo" src="../public/images/mrvlogo.png" ></a>
+                <a class="navbar-brand url" href="../feed/mrv"><img class="logo" src="../public/images/mrvlogo.png" ></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <div id="nomesnavbar"class="nomesnavbar">
                         <ul  id=""class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-
-                            <li class="nav-item">
-                            <a id="suasObras"class="nav-link url" href="/empreiteira/suasObras">Suas Obras</a>
-                            </li>
                         </ul>
                     
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            
                             <li class="nav-item dropdown">
-                                <a class="nav-link url" href="../empreiteira/editarPerfil" role="button" >
-                                    <img id="configuracoes" class="configuracoes" src="../public/images/configuracoes.svg">
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link url" href="/feed/empreiteira" role="button"  >
+                                <a class="nav-link url" href="../feed/mrv" role="button"  >
                                     <img class="voltar" src="../public/images/setaVoltar.svg">
                                 </a>
                             </li>
@@ -75,7 +65,6 @@
                     <hr class="lines">
                     <div class="Recomendações">
                         <h1 class="corpo_titulos">Informações gerais</h1>
-                        <hr class="lines">
                         <br>
                         <div class="scroll-bg">
                             <ul>
@@ -93,7 +82,6 @@
                                     </div>
                                     
                                     <div>
-                                        
                                         <div class="info">
                                             <h1 class="rec-list-titulo">Funcionarios:</h1>
                                             <p class="rec-list-text"><%-empreiteira.qtd_funcionario%></p>
@@ -103,7 +91,8 @@
                             </ul>
                         </div>
                     </div>
-                    <br><br>
+                    <br>
+                    <br>
                     <hr class="lines">
                     <div class="Recomendações">
                         <h1 class="corpo_titulos">Endereço</h1>
@@ -114,7 +103,8 @@
                                         <div class="info">
                                             <h1 class="rec-list-titulo">Logradouro: </h1>
                                             <p class="rec-list-text"> <%-empreiteira.logradouro%> - <%-empreiteira.numero%> </p>
-                                        </div><br>
+                                        </div>
+                                        <br>
                                         <div class="info">
                                             <h1 class="rec-list-titulo">Bairro:</h1>
                                             <p class="rec-list-text"><%-empreiteira.bairro%></p>
@@ -122,8 +112,9 @@
                                     </div>
                                     <div>
                                         <div class="info">
-                                            <h1 class="rec-list-titulo">Cidade:</h1><p class="rec-list-text"><%-empreiteira.cidade%></p>
-                                        </div><br>
+                                            <h1 class="rec-list-titulo">Cidade: </h1><p class="rec-list-text"><%-empreiteira.cidade%></p>
+                                        </div>
+                                        <br>
                                         <div class="info">
                                             <h1 class="rec-list-titulo">Estado:</h1>
                                             <p class="rec-list-text"><%-empreiteira.estado%></p>
@@ -140,9 +131,31 @@
                         <p id="corpo_descrição"><%-empreiteira.descricao%></p>
                     </div>
                     <br>
+                    <hr class="lines">
+                    <div id="Recomendações">
+                        <h1 class="corpo_titulos">Recomendações:</h1>
+                        <div class="scroll-bg">
+                                    
+                                        <div class="info">
+                                            <h1 class="rec-list-titulo">Recommendation 1:</h1>
+                                            <p class="rec-list-text"> <%-empreiteira.descricao_prazo%></p>
+                                        </div>
+                                        <br><div class="info">
+                                            <h1 class="rec-list-titulo">Recommendation 2:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.descricao_qualidade%></p>
+                                        </div>
+                                        <br><div class="info">
+                                            <h1 class="rec-list-titulo">Recommendation 3:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.descricao_limpeza_organizacao%></p>
+                                        </div>
+
+                                
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
+
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../../public/js/url.js"></script>

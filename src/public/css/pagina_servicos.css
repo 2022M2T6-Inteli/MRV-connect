@@ -37,17 +37,29 @@
     text-align: center;
   }
   
-
-  /* Estrutura dos cards */
   .div-card{
+    height: 20%;
     margin-left: 8% ;
     margin-right: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
+  }
+
+  #img-left{
+    width: 35vw !important;
+  }
+
+  #left{
+    width: 40vw;
   }
   
+  #right{
+    width: 60vw;
+  }
+
   .card{
     border: 2px solid black !important;
     border-color: black !important;
@@ -68,12 +80,14 @@
     text-align: center;
     justify-content: center;
     background-color: #006B3F;
+    
     color: white;
   }
 
   .card-img, .card-img-top{
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
+    
   }
 
   .div-card-obras{
@@ -85,12 +99,12 @@
   }
 
   .informacoes-obra{
-    width: 50%;
     margin-right: 4vw;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
+
   }
 
   #descricao2{
@@ -141,6 +155,7 @@
 
   .borda-notificacoes4{
     display: flex;
+    /* margin: 0 auto; */
     width: 49%;
     border-radius: 10px;
     border: 1px solid orange;
