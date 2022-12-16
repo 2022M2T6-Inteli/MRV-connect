@@ -66,7 +66,7 @@
                         <img src="../public/images/predio2.jpg" class="card-img-top" alt="..." style="border-radius:0%;">
                         <div class="card-body">
                             <div id="divbairro">
-                                <h2 id="bairro"><%=servicos[i].nome%></h2>
+                                <h2 id="bairro"><%=servicos[i].cidade%></h2>
                             </div>
                             <hr class="card_line">
                             <div class="card_date">
@@ -87,7 +87,7 @@
                                     </a>
                                 </div>
                                 <div id="rejeitado">
-                                    <a  href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
+                                    <a class="url" href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
                                         <button class="btn_card">
                                             <img id="rejeitado" src="../public/images/rejeitado.png">
                                         </button>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a  id="cadastrados" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"><button  id="cadastrocard"class="btn btn-primary" type="button">Empreiteiras cadastradas</button></a>
+                        <a  id="cadastrados" class="url" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"><button  id="cadastrocard"class="btn btn-primary" type="button">Empreiteiras cadastradas</button></a>
                     </div>
                 <% } %>
             </div>
