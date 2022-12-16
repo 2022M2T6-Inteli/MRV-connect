@@ -59,7 +59,9 @@
             <div class="div-card">
                 <% for (let i = 0; i < servicos.length; i++) { %>
                     <div class="card" style="width: 18rem;">
-                        <h2 class="titulo-card"> <%=servicos[i].nome%> </h2>
+                        <div id="divtitle">
+                            <h2 id="title" class="titulo-card"> <%=servicos[i].nome%> </h2>
+                        </div>
                         
                         <img src="../public/images/predio2.jpg" class="card-img-top" alt="..." style="border-radius:0%;">
                         <div class="card-body">
@@ -68,9 +70,13 @@
                             </div>
                             <hr class="card_line">
                             <div class="card_date">
-                                <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
-                                <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
-                                <p class="card-text">Serviço: <%=servicos[i].tipo_servico%></p>
+                                <div id="date">
+                                    <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
+                                    <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
+                                </div>
+                                <div id="servico">
+                                    <p class="card-text">Serviço: <%=servicos[i].tipo_servico%></p>
+                                </div>
                             </div>
                             <div id = "card_b">
                                 <div id="editar">
@@ -89,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="url" id="cadastrados" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"><button  id="cadastrocard"class="btn btn-primary" type="button">Empreiteiras cadastradas</button></a>
+                        <a  id="cadastrados" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"><button  id="cadastrocard"class="btn btn-primary" type="button">Empreiteiras cadastradas</button></a>
                     </div>
                 <% } %>
             </div>
@@ -97,9 +103,6 @@
 
             
             
-    
-        <div class="seemore"><button id="seemorebutton" class="btn btn-primary" type="button">Mostrar Mais</button></div>
-
 
 <!-- Incluir o footer atráves da função include do ejs -->
 <%- include('../footer'); -%>

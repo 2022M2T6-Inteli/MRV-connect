@@ -290,20 +290,34 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     text-align: center;
 } */
 .titulo-card{
+    min-height: 3vw;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
     margin-bottom: 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    padding-left: 5%;
     background-color: #006B3F;
     color: white;
+}
+#cadastrocard{
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    margin: 0 !important;
+    width: 100% !important;
+}
+#servico{
+ margin-top: 4%;
+ margin-bottom: 4%;
+}
+#date{
+    display: flex;
+    flex-direction: row !important;
 }
 .card_line{
     width:100%;
 }
 .card_date{
     display: flex;
+    flex-direction: column;
 }
 #card_b{
     width: 100%;
@@ -316,7 +330,15 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     overflow: hidden;
 }
 #bairro{
-    min-width: 193%;
+    min-width: 250%;
+}
+
+#divtitle{
+    overflow: hidden;
+}
+
+#title{
+    min-width: 250%;
 }
 
 /*
