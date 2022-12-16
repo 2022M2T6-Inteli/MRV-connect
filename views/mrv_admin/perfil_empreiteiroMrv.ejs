@@ -42,20 +42,20 @@
                     <!--div id="corpo_left_right"-->
                     <input type="hidden" name="id_empreiteira" value="" />
                     
-                        <h1 id="profile_name" name="nome_fantasia" >Nome:<%-empreiteira.nome_fantasia%></h1>
+                        <h1 id="profile_name" name="nome_fantasia" >Nome: <%-empreiteira.nome_fantasia%></h1>
                         <div id="contact_icons">
                             <div>
-                            <img class="icons" src="../public/images/whatsapp.svg">
-                            <img class="icons" src="../public/images/instagram.svg">
-                            <img class="icons" src="../public/images/facebook.svg">
-                            <img class="icons" src="../public/images/email.svg">
-                            <img class="icons" src="../public/images/phone.svg">
+                                <img class="icons" src="../public/images/whatsapp.svg">
+                                <img class="icons" src="../public/images/instagram.svg">
+                                <img class="icons" src="../public/images/facebook.svg">
+                                <img class="icons" src="../public/images/email.svg">
+                                <img class="icons" src="../public/images/phone.svg">
                             </div>
                         </div>
                         <div id="profile_rating">
-                            <div class="profile_rating-text">
+                            <div>
                                 <img class="rating_star" src="../public/images/star.svg">
-                                <p>4.7</p>
+                                <p class="profile_rating-text">4.7</p>
                             </div>
                         </div>
                     <!--/div-->
@@ -63,45 +63,93 @@
             
                 <div id="corpo_right">
                     <hr class="lines">
+                    <div id="Recomendações">
+                        <h1 class="corpo_titulos">Informações gerais</h1>
+                        <div class="scroll-bg">
+                            <ul>
+                                <div class="informacoesGerais">       
+                                    <div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Nome:</h1>
+                                            <p class="rec-list-text"> <%-empreiteira.nome_fantasia%></p>
+                                        </div>
+                                    
+                                        <div>
+                                            <h1 class="rec-list-titulo">CNPJ:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.cnpj%></p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Data de abertura:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.data_de_abertura%></p>
+                                        </div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Quantidade de funcionarios:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.qtd_funcionario%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="lines">
+                    <div id="Recomendações">
+                        <h1 class="corpo_titulos">Endereço</h1>
+                        <div class="scroll-bg">
+                            <ul>
+                                <div class="informacoesGerais">
+                                    <div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Logradouro: </h1>
+                                            <p class="rec-list-text"> <%-empreiteira.logradouro%> - <%-empreiteira.numero%> </p>
+                                        </div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Bairro:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.bairro%></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Cidade/Estado: </h1><p class="rec-list-text"><%-empreiteira.cidade%></p>
+                                        </div>
+                                        <div>
+                                            <h1 class="rec-list-titulo">Estado:</h1>
+                                            <p class="rec-list-text"><%-empreiteira.estado%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="lines">
                     <div id="Descrição">
                         <h1 class="corpo_titulos">Descrição:</h1>
                         <p id="corpo_descrição"><%-empreiteira.descricao%></p>
                     </div>
-                    <hr class="lines">
-                    <div id="Experiências">
-                        <h1 class="corpo_titulos">Experiências:</h1>
-                        <div id="conteudo_exp">
-                            <img class="exp_icons" src="../public/images/rectangle.svg">
-                            <img class="exp_icons" src="../public/images/rectangle.svg">
-                            <img class="exp_icons" src="../public/images/rectangle.svg">
-                            <img class="exp_icons" src="../public/images/rectangle.svg">
-                            <img class="exp_icons" src="../public/images/rectangle.svg">
-                            <img class="exp_icons" src="../public/images/rectangle.svg">
-                        </div>
-                    </div>
+                    <br>
                     <hr class="lines">
                     <div id="Recomendações">
                         <h1 class="corpo_titulos">Recomendações:</h1>
                         <div class="scroll-bg">
-                            <div class="scroll-div">
-                                <div class="scroll-object">
                                     <ul>
-                                        <li>
+                                        <div>
                                             <h1 class="rec-list-titulo">Recommendation 1:</h1>
                                             <p class="rec-list-text"> <%-empreiteira.descricao_prazo%></p>
-                                        </li>
-                                        <br><li>
+                                        </div>
+                                        <br><div>
                                             <h1 class="rec-list-titulo">Recommendation 2:</h1>
                                             <p class="rec-list-text"><%-empreiteira.descricao_qualidade%></p>
-                                        </li>
-                                        <br><li>
+                                        </div>
+                                        <br><div>
                                             <h1 class="rec-list-titulo">Recommendation 3:</h1>
                                             <p class="rec-list-text"><%-empreiteira.descricao_limpeza_organizacao%></p>
-                                        </li>
+                                        </div>
 
                                     </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

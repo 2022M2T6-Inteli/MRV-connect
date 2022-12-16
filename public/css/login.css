@@ -517,7 +517,14 @@ h4{
 .corpo_titulos{
   font-size: 4vh;
   font-weight: bolder;
-  margin: 3vh 0 0 3vw;
+  margin: 3vh 0 0 17vw;
+}
+
+.informacoesGerais{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 
 /*A descrição em sí*/
@@ -720,3 +727,4 @@ h4{
  
 
 } */
+
