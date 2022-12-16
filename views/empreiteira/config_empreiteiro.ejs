@@ -30,18 +30,19 @@
             </div>
         </div>
     </nav>
-    <br>
-    <h5 class="modal-title">Editar Perfil</h5>   
+    
     <form method="post" action="/empreiteira/editarPerfil">    
         <div class="modal-body">
             <div id="modal-body-left">
                 <img id="modal-image" src="https://www.nailseatowncouncil.gov.uk/wp-content/uploads/blank-profile-picture-973460_1280.jpg">
                 <p id="change-photo">Alterar foto de perfil...</p>
-                
             </div>
-                
-                    <input type="hidden" name="id_empreiteira" value="<%=id%>">
-                    <div id="modal-body-right">
+            
+            <input type="hidden" name="id_empreiteira" value="<%=id%>">
+            <div id="modal-body-right">
+                <h5 class="modal-title">Editar Perfil</h5>   
+                <div id="right">
+                    <div id="mbrl" >
                         <div class="modal-ajuste">
                             <h3 class="modal-ajuste-titulo">Nome:</h3>
                             <input type="text" class="modal-ajuste-texto" name="nome_fantasia" placeholder=" mau gessos" value="<%=empreiteiras.nome_fantasia%>" >
@@ -51,43 +52,47 @@
                             <input type="text" class="modal-ajuste-texto" name="telefone" placeholder=" (12)34567-8910" value="<%=empreiteiras.telefone%>" >
                         </div>
                         <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">E-mail:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="email" placeholder=" mauriciogessos@gmail.com" value="<%=empreiteiras.email%>">
+                        </div>
+                        <div class="modal-ajuste">
+                            <h3 class="modal-ajuste-titulo">Senha:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="senha" placeholder=" *******">
+                        </div>
+                    </div>
+                    <div id="mbrr">
+                        <div class="modal-ajuste">
                             <h3 class="modal-ajuste-titulo">Logradouro:</h3>
                             <input type="text" class="modal-ajuste-texto" name="logradouro" placeholder=" @mauriciogessos" value="<%=empreiteiras.logradouro%>">
                         </div>
                         <div class="modal-ajuste">
-                            <div>
-                                <h3 class="modal-ajuste-titulo">N°:</h3>
-                                <input type="text" class="modal-ajuste-texto" name="numero" placeholder=" @mauriciogessos" value="<%=empreiteiras.numero%>">
-                            </div>
-                            <div>
-                                <h3 class="modal-ajuste-titulo">Bairro:</h3>
-                                <input type="text" class="modal-ajuste-texto" name="bairro" placeholder=" @mauriciogessos" value="<%=empreiteiras.bairro%>">
-                            </div>
+                            <h3 class="modal-ajuste-titulo">N°:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="numero" placeholder=" @mauriciogessos" value="<%=empreiteiras.numero%>">
                         </div>
                         <div class="modal-ajuste">
-                            <div>
-                                <h3 class="modal-ajuste-titulo">E-mail:</h3>
-                                <input type="text" class="modal-ajuste-texto" name="email" placeholder=" mauriciogessos@gmail.com" value="<%=empreiteiras.email%>">
-                            </div>
-                            <div>
-                                <h3 class="modal-ajuste-titulo">Senha:</h3>
-                                <input type="text" class="modal-ajuste-texto" name="senha" placeholder=" *******">
-                            </div>
+                            <h3 class="modal-ajuste-titulo">Bairro:</h3>
+                            <input type="text" class="modal-ajuste-texto" name="bairro" placeholder=" @mauriciogessos" value="<%=empreiteiras.bairro%>">
                         </div>
+                        
                         <div class="modal-ajuste">
                             <h3 class="modal-ajuste-titulo">Quantidade de funcionarios:</h3>
                             <input type="text" class="modal-ajuste-texto" name="qtd_funcionario" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit." value="<%=empreiteiras.qtd_funcionario%>">
                         </div>
-                        <div class="modal-ajuste">
-                            <h3 class="modal-ajuste-titulo">Descrição:</h3>
-                            <input type="text" class="modal-ajuste-texto" name="descricao" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit." value="<%=empreiteiras.descricao%>">
                     </div>
-                
+                </div>
+                <div class="modal-ajuste">
+                    <h3 class="modal-ajuste-titulo-desc">Descrição:</h3>
+                    <input type="text" class="modal-ajuste-texto-desc" name="descricao" placeholder=" Lorem ipsum dolor sit amet consectetur adipisicing elit." value="<%=empreiteiras.descricao%>">
+                </div>
             </div>
         </div>
-
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" background-color="green">Salvar</button>
+            <div id="footL"></div>
+
+            
+            <div id="footR">
+                <button type="submit" id="buttonSave" class="btn btn-primary" background-color="green">Salvar</button>
+            </div>
         </div>
     </form>
 
