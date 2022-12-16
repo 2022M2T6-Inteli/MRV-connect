@@ -295,7 +295,7 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     margin-bottom: 0;
     display: flex;
     text-align: center;
-    justify-content: center;
+    padding-left: 5%;
     background-color: #006B3F;
     color: white;
 }
@@ -304,6 +304,8 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 .card_date{
     display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 #card_b{
     width: 100%;
@@ -316,9 +318,30 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     overflow: hidden;
 }
 #bairro{
-    min-width: 193%;
+    min-width: 250%;
+}
+#cadastrocard{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+#divtitulo{
+    overflow: hidden;
+}
+#title{
+    min-width: 250%;
 }
 
+#datas{
+ display: flex;
+ flex-direction: row !important;
+}
+
+#servicos{
+margin-top: 4%;
+margin-bottom: 4%;
+}
 /*
 .cardsss-title{
     background-color: azure;

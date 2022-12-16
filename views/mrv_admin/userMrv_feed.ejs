@@ -59,8 +59,9 @@
             <div class="div-card">
                 <% for (let i = 0; i < servicos.length; i++) { %>
                     <div class="card" style="width: 18rem;">
-                        <h2 class="titulo-card"> <%=servicos[i].nome%> </h2>
-                        
+                        <div id="divtitulo">
+                            <h2 id="title" class="titulo-card"> <%=servicos[i].nome%> </h2>
+                        </div>
                         <img src="../public/images/predio2.jpg" class="card-img-top" alt="..." style="border-radius:0%;">
                         <div class="card-body">
                             <div id="divbairro">
@@ -68,9 +69,14 @@
                             </div>
                             <hr class="card_line">
                             <div class="card_date">
-                                <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
-                                <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
-                                <p class="card-text">Serviço: <%=servicos[i].tipo_servico%></p>
+                                <div id="datas">
+                                    <p class="card-text">Inicio: <%=servicos[i].data_abertura%></p>
+                                    <p class="card-text">Prazo: <%=servicos[i].data_finadlizacao%></p>
+                                </div>
+
+                                <div id="servicos">
+                                    <p class="card-text">Serviço: <%=servicos[i].tipo_servico%></p>
+                                </div>
                             </div>
                             <div id = "card_b">
                                 <div id="editar">
@@ -81,15 +87,15 @@
                                     </a>
                                 </div>
                                 <div id="rejeitado">
-                                    <a class="url" href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
-                                    <button class="btn_card">
-                                        <img id="rejeitado" src="../public/images/rejeitado.png">
-                                    </button>
+                                    <a  href="/servico/deletarServico?id_servico=<%=servicos[i].id_servico%>">
+                                        <button class="btn_card">
+                                            <img id="rejeitado" src="../public/images/rejeitado.png">
+                                        </button>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <a class="url" id="cadastrados" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"><button  id="cadastrocard"class="btn btn-primary" type="button">Empreiteiras cadastradas</button></a>
+                        <a  id="cadastrados" href="/mrv/candidatos?id_servico=<%=servicos[i].id_servico%>"><button  id="cadastrocard"class="btn btn-primary" type="button">Empreiteiras cadastradas</button></a>
                     </div>
                 <% } %>
             </div>
@@ -98,14 +104,14 @@
             
             
     
-        <div class="seemore"><button id="seemorebutton" class="btn btn-primary" type="button">Mostrar Mais</button></div>
+        
 
 
 <!-- Incluir o footer atráves da função include do ejs -->
 <%- include('../footer'); -%>
 
     </body>
-<script src="../projeto_frontend/js/script.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../public/js/url.js"></script>
+    <script src="../projeto_frontend/js/script.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../public/js/url.js"></script>
 </html>
