@@ -13,7 +13,6 @@
 /* dando orientações para o corpo da pagina, para qual altura ele deve obedecer e não colocando em pixel 
 para poder manter a proporção em outras telas */
 body {
-    width: 100vw;
     height: 100vh;
     background-color:rgb(252,252,252);
     font-family: 'verdanaFont' !important;
