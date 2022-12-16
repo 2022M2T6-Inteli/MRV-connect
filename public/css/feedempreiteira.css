@@ -269,22 +269,9 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 
 /* posicionamento do texto, fazendo com que ele fique 30 porcento acima da margem final do block box e 5 porcento a esquerda da margin final */
 .block .text {
+    position: absolute;
     bottom: 30%;
     left: 5%;
-}
-
-.text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-}
-
-#divslide{
-    width: 50%;
-    height: 100%;
 }
 
 /* mexendo no titulo do block box, ajustando sua cor e a margem */
@@ -298,26 +285,20 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 /* Colocando um alinhamento do texto a esquerda, com o tamanho de 45 porcento da block box e a sua cor como branca */
 .block .text h3 {
-    max-width: 90%;
+    max-width: 45%;
     color: white;
     text-align: left;
     transform: translateX(-20px);
     transition: transform 0.5s;
     font-size: 20px;
-    margin-left: 3%;
 }
 
 #bncadastro{
-    width: auto;
-}
-#cadastrocard{
-    
-    margin: 0 !important;
-    width: 100% !important;
+    margin-left: 10vw;
 }
 /* começando a mexer no carrossel das imagens, ainda não esta pronto, porém está com algumas de suas definições */
 .sectioncontainer {
-    width: 46%;
+    width: 50%;
     height: 90%;
     position: absolute;
     margin: auto;
@@ -330,14 +311,13 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .slider {
-    padding-top: 14%;
-    padding-right: 5%;
     margin: auto;
 	display: flex;
 	aspect-ratio: 16 / 9;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 	border-radius: 0.5rem;
 	-ms-overflow-style: none; /* escondendo scrollbar IE and Edge */
 	scrollbar-width: none; /* escondendo scrollbar Firefox */
@@ -403,7 +383,7 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
 }
 
 .titulo-card{
-    min-height: 3vw;
+    min-height: 5vw;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
     margin-bottom: 0;
@@ -414,7 +394,10 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     color: white;
 }
 
-
+#bairro{
+    min-height: 3vh;
+    min-width: 18vw !important;
+}
 .card_line{
     width:100%;
 }
@@ -425,18 +408,19 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     font-size: 2vh;
     text-align: left;
     width:30%;
-    margin:0 20% 5% 0;
+    margin:0 20% 0 0;
 } 
 #card_b{
     width: 100%;
-    align-items: center;
+    text-align: center;
+    display: flex;
 }
-#divbairro{
-    overflow: hidden;
+
+#seemorebutton{
+    width: 20%;
+   
 }
-#bairro{
-    min-width: 193%;
-}
+
 .seemore{
     padding: 1%;
     display: flex;
