@@ -29,11 +29,11 @@ router.post("/criarServico", (req, res) => {
 
     const sql = `
         INSERT INTO servico 
-        (nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, cidade, estado) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+        (nome, logradouro, bairro, data_abertura, data_finadlizacao, especialidade, numero, descricao, cidade, estado) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
 
-    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, cidade, estado], (err, rows) =>{
+    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, especialidade, numero, descricao, cidade, estado], (err, rows) =>{
         if(err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
@@ -75,6 +75,7 @@ router.post("/editarServico", (req, res) => {
     let bairro = req.body["bairro"];
     let data_abertura = req.body["data_abertura"];
     let data_finadlizacao = req.body["data_finadlizacao"];
+    let especialidade = req.body["especialidade"];
     let numero = req.body["numero"];
     let descricao = req.body["descricao"];
 
@@ -86,12 +87,13 @@ router.post("/editarServico", (req, res) => {
                         bairro=?, 
                         data_abertura=?, 
                         data_finadlizacao=?,
+                        especialidade=?,
                         numero=?, 
                         descricao=? 
                     WHERE id_servico=?`;
 
 
-    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, id_servico], (err, rows) => {
+    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, especialidade, numero, descricao, id_servico], (err, rows) => {
 		if (err) {
             console.error(err.message);
             res.send("Erro: " + err.message);

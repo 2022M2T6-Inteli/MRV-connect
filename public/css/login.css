@@ -219,7 +219,7 @@ h4{
   
 /*O titulo do modal, onde está escrito Editar Perfil*/
 .modal-title{
-  height:5vh;
+  height:4vh;
   font-size: 4vh;
   font-weight: bolder;
   flex: 1;
@@ -228,7 +228,7 @@ h4{
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 0 0 2vh 0;
+  /* margin: 0 0 2vh 0; */
 }
 
 /*botão "x" que fica no header*/
@@ -263,10 +263,12 @@ h4{
 }
 
 #footR{
+  padding: 10%;
   width: 66vw;
 }
 
 #buttonSave{
+  padding: 10%;
   height: 4vh;
   width: 10vw;
   background-color: orange;
@@ -365,7 +367,7 @@ h4{
   font-size: 2vh;
   margin: 0 0 0 1.5vw;
   width: 63vw;
-  height: 20vh;
+  height: 14vh;
   text-align: left;
 }
 
@@ -535,7 +537,7 @@ h4{
 /*A descrição em sí*/
 #corpo_descrição{
   height: auto;
-  font-size: 2vh;
+  font-size: 3vh;
   margin: 0 9vw 2vh 5vw;
   text-align: justify;
 }
@@ -584,7 +586,7 @@ h4{
 
 /*Os titulos de cada recomendação. Por enquanto estão como "Recommendation 1:", "Recommendation 2:", etc.*/
 .rec-list-titulo{
-  font-size: 2vh;
+  font-size: 2.5vh;
   font-weight: bold;
   line-height: 3vh;
   margin:0;
@@ -593,7 +595,7 @@ h4{
 /*O texto escrito de cada recomendação*/
 .rec-list-text{
   margin:0;
-  font-size: 2vh;
+  font-size: 3vh;
   line-height: 3vh;
 }
 

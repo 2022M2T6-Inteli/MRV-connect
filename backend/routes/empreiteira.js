@@ -62,6 +62,8 @@ router.post("/editarPerfil", (req, res) => {
     let logradouro = req.body["logradouro"];
     let numero = req.body["numero"];
     let bairro = req.body["bairro"];
+    let cidade = req.body["cidade"];
+    let estado = req.body["estado"];
     let telefone = req.body["telefone"];
     let email = req.body["email"];
     let senha = req.body["senha"];
@@ -75,12 +77,14 @@ router.post("/editarPerfil", (req, res) => {
                         logradouro=?,
                         numero=?,
                         bairro=?,
+                        cidade=?,
+                        estado=?,
                         telefone=?,
                         email=?,
                         senha=?,
                         descricao=?
                     WHERE id_empreiteira=?`;
-    db.run(sql, [nome_fantasia, qtd_funcionario, logradouro, numero, bairro, telefone, email, senha, descricao, id_empreiteira], (err, rows) => {
+    db.run(sql, [nome_fantasia, qtd_funcionario, logradouro, numero, bairro, cidade, estado, telefone, email, senha, descricao, id_empreiteira], (err, rows) => {
 		if (err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
