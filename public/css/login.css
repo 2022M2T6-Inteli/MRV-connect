@@ -476,7 +476,7 @@ h4{
 #contact_icons{
   height:4vh;
   width:11.3vw;
-  margin: 0 11.85vw;
+  margin: 0 auto;
   text-align: center;
   display:flex;
   justify-content: space-between;
@@ -517,21 +517,26 @@ h4{
 .corpo_titulos{
   font-size: 4vh;
   font-weight: bolder;
-  margin: 3vh 0 0 17vw;
+  margin: 3vh 0 0 5vw;
+  text-align: left;
+}
+
+.info{
+  width: 18vw;
+  text-align: left;
+  margin: 0 0 0 5vw;
 }
 
 .informacoesGerais{
   display: flex;
-  justify-content: space-between;
-  margin-left: 20vh;
-  margin-right: 20vh;
+  /* margin: 0 10vw 0 5vw; */
 }
 
 /*A descrição em sí*/
 #corpo_descrição{
   height: auto;
   font-size: 2vh;
-  margin: 0 9vw 2vh 3vw;
+  margin: 0 9vw 2vh 5vw;
   text-align: justify;
 }
 
@@ -559,7 +564,7 @@ h4{
 }
 
 /*Area das recomendações que contém o titulo "Recomendações" e a lista das recomendações*/
-#Recomendações{
+.Recomendações{
   height: 21vh;
   margin: 0 9vw 0 0;
 }

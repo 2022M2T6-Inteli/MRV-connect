@@ -49,20 +49,34 @@
                                 <div class="endereco">
                                     <div class="divlogradouro">
                                         <label id="logradouro" for="">Logradouro:</label>
-                                        <input class="input" type="text" value="<%=obra.logradouro%>" />
-                                    </div>
-
-                                    <div class="divNum">
-                                        <label id="num" for="">Numero:</label>
-                                        <input class="input" name="numero" type="text" value="<%=obra.numero%>" /><br>
+                                        <input class="input" type="text" name="logradouro" value="<%=obra.logradouro%>" />
                                     </div>
                                 
                                 <!--BAIRRO-->
                                     <div class="divBEC">
                                         <label id="bairroinput" for="">Bairro:</label>
-                                        <input class=" input" type="text" value="<%=obra.bairro%>" />
+                                        <input class=" input" type="text" name="bairro" value="<%=obra.bairro%>" />
                                         <br>
                                     </div><br>
+
+                                    <div class="divNum">
+                                        <label id="num" for="">Numero:</label>
+                                        <input class="input" name="numero" type="text" value="<%=obra.numero%>" /><br>
+                                    </div>
+                                </div>
+
+                                <div class="endereco">
+                                    <!--CIDADE ESTADO-->
+                                    <div class="divlogradouro">
+                                        <label id="cidade" for="">Cidade:</label>
+                                        <input class="input" name="cidade" type="text" value="<%=obra.cidade%>"/>
+                                    </div>
+
+                                    <div class="divlogradouro">
+                                        <label id="estado" for="">Estado:</label>
+                                        <input class="input" name="estado" type="text" value="<%=obra.estado%>"/>
+                                    </div><br>
+                                    
                                 </div>
                                 
                                 <!--DATA INICIO / DATA ENTREGA-->
@@ -74,6 +88,10 @@
                                     <div class="divdataFim">
                                         <label id="data_fim" for="">Data entrega:</label>
                                         <input class="input" name="data_finadlizacao" type="text" value="<%=obra.data_finadlizacao%>" /><br>
+                                    </div>
+                                    <div class="tipoDeServico">
+                                        <label id="tipoDeServico" for="">Tipo de serviço:</label>
+                                        <input class="input" name="servico" type="text" value="<%=obra.servico%>"/><br>
                                     </div>
                                 </div>
 
