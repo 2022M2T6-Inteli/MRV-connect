@@ -19,8 +19,8 @@ router.post("/criarServico", (req, res) => {
     let nome = req.body["nome"];
     let logradouro = req.body["logradouro"];
     let bairro = req.body["bairro"];
-    //let cidade = req.body["cidade"];
-    //let estado = req.body["estado"];
+    let cidade = req.body["cidade"];
+    let estado = req.body["estado"];
     let data_abertura = req.body["data_abertura"];
     let data_finadlizacao = req.body["data_finadlizacao"];
     let especialidade = req.body["especialidade"];
@@ -29,11 +29,11 @@ router.post("/criarServico", (req, res) => {
 
     const sql = `
         INSERT INTO servico 
-        (nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao) 
-        VALUES (?, ?, ?, ?, ?, ?, ?)`;
+        (nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, cidade, estado) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
 
-    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao], (err, rows) =>{
+    db.run(sql, [nome, logradouro, bairro, data_abertura, data_finadlizacao, numero, descricao, cidade, estado], (err, rows) =>{
         if(err) {
             console.error(err.message);
             res.send("Erro: " + err.message);
@@ -145,6 +145,25 @@ router.post("/inscricao", (req, res) => {
     })
 });
 
+router.get("/filtro", (req, res) => {
+    let estado = req.query["valorEstado"];
+    let cidade = req.query["valorCidade"];
+
+    const sql = `
+        SELECT * 
+        FROM servico
+        WHERE estado = ? and cidade = ?
+    `;
+
+    db.all(sql, [estado, cidade], (err, rows) => {
+        if(err) {
+            console.error(err.message);
+            res.send("Erro: " + err.message);
+            return;
+        }
+        res.json(rows);
+    });
+});
 
 //exporta cadastro para a api.js
 module.exports = router;
