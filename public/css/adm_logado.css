@@ -341,6 +341,10 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     min-width: 250%;
 }
 
+#servicos{
+margin-top: 4%;
+margin-bottom: 4%;
+}
 /*
 .cardsss-title{
     background-color: azure;
