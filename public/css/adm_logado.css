@@ -312,6 +312,13 @@ para melhor alinhamento e design da pagina, fazendo com que a box fique com um g
     justify-content: space-between;
 }
 
+#divbairro{
+    overflow: hidden;
+}
+#bairro{
+    min-width: 193%;
+}
+
 /*
 .cardsss-title{
     background-color: azure;
