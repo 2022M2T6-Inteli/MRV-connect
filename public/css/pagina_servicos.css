@@ -47,7 +47,19 @@
     flex-wrap: wrap;
     
   }
+
+  #img-left{
+    width: 10vw !important;
+  }
+
+  #left{
+    width: 40vw;
+  }
   
+  #right{
+    width: 60vw;
+  }
+
   .card{
     border: 2px solid black !important;
     border-color: black !important;
