@@ -23,39 +23,26 @@ O projeto visa atuar em dois problemas: a escassez de mão de obra nos canteiros
 
 ## 📁 Estrutura de pastas
 
-|--> backend<br>
-    |--> routes<br>
-    |--> utils<br>
-|--> data<br>
-|--> node_modules<br>
-|--> public<br>
-    |--> css<br>
-    |--> images<br>
-    |--> js<br>
-|--> views<br>
-    |--> empreiteira<br>
-    |--> login<br>
-    |--> mrv_admin<br>
+|--> documentos<br>
+  &emsp;| --> outros <br>
+  &emsp;|T6_Web_application_document.docx<br>
+  &emsp;|T6_Web_application_document.pdf<br>
+|--> imagens<br>
+|--> src<br>
+  &emsp;|--> Backend<br>
+  &emsp;|--> Frontend<br>
 | readme.md<br>
-
--> Arquivo extras: <b>package-lock.json</b> e <b>package.json</b> são bibliotecas em formato aberto usado como alternativa ao XML para a transferência de dados estruturados
+| license.txt
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
-- <b>backend<b>: contendo duas subpastas expecificando os endpoints e a integração ao banco de dados.
-
-- <b>data</b>: com acesso ao banco de dados em SQL.
-
-- <b>node_modules</b>: nesta pasta é possível verificar as bibliotecas pala desenvolvimento de aplicação web.
-
-- <b>public</b>: aqui estarão todos os documentos do projeto e sobre as configurações de funções (js), estilos e definições (CSS) e as imagens utilizadas no site.
-
-- <b>views</b>: dividido em subpastas que terão o site ramificado para a visão e usabilidade para as empreiteiras e para a construtora.
-
 - <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-- <b>documentos</b>: aqui estarão todos os documentos do projeto e sobre o desenvolvimento do mesmo (WAD).
+- <b>documentos</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>outros</b> onde estão presentes aqueles documentos complementares ao <b>web application document</b>.
 
+- <b>imagens</b>: imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins).
+
+- <b>src</b>: nesta pasta encontra-se todo o código fonte do sistema (existem duas subpastas <b>backend</b> e <b>frontend</b> que contêm, respectivamente, o código do servidor e o código da página web).
 
 ## 💻 Configuração para desenvolvimento
 
@@ -114,6 +101,10 @@ npm start
     * Finalização do código, executando sem erros;
     * Disponibilização da documentação com a descrição do desenvolvimento do projeto.
 
+
+## 📋 Licença/License
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M2T6-Inteli/MRV-connect">MRV-connect</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli, <a href="https://www.linkedin.com/in/antonionassar/">Antonio Nassar</a>, <a href="https://www.linkedin.com/in/eduarda-gonzaga-009794219"> Eduarda Gonzaga</a>, <a href="https://www.linkedin.com/in/emely-tavares-3575ba24a">Émely Tavares</a>, <a href="https://www.linkedin.com/in/fabio-piemonte-823a65211">Fabio Piemonte</a>, <a href="https://www.linkedin.com/in/lfcovas97">Luiz Fernando Covas</a>, <a href="https://www.linkedin.com/in/mauricio-felicissimo-475024240">Mauricio Felicissimo</a>, <a href="https://www.linkedin.com/in/yago-phellipe">Yago Phellipe Matos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 🎓 Referências
 Aqui estão as referências usadas no projeto:
 
